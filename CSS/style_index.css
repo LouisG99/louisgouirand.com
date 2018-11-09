@@ -1,0 +1,93 @@
+*{
+	margin: 0px;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+body {
+	font-family: Helvetica;
+	background: url(../images/me-background_B&W.jpg) no-repeat fixed; 
+	background-size: 100%;
+	background-color: black;
+}
+
+.navbar-text {
+	font-size: 1.5em;
+	text-align: center; 
+}
+
+ul.nav {
+	position: table; 
+	margin: 0 auto;
+}
+
+
+.as .fa-home {
+	position: relative;
+	z-index: -1; 
+	padding: auto;
+}
+
+
+.center-message{
+	float: center;
+	width: 30%;
+	margin-top: 20%;
+	text-align: center; 
+}
+
+.intro {
+	color: grey;
+}
+
+.name {
+	font-family: "Courier";
+	font-weight: bold;
+	color: teal;
+}
+
+
+
+@media only screen and (max-width: 999px) {
+	/* for devices with width smaller than horizontal iPad */
+
+	body {
+		background: url(../images/me-background_B&W_mobile.jpg) no-repeat fixed; 
+		background-size: 100%;
+		background-color: black;
+	}
+
+	ul.navbar-nav, .navbar-brand.name {
+		margin-left: 50%;
+		text-align: center;
+	}
+
+	.navbar-brand.name {
+		width: 50%;
+		padding-left: auto;
+		padding-right: auto;
+	}
+
+	.center-message {
+		margin: 0 auto;
+		width: 50%;
+	}
+
+	.contact-logo {
+		font-size: 3em;
+	}
+}
+
+@media only screen and (orientation: portrait) and (min-width: 1000px)  {
+	/* for devices with large width but vertical orientation (iPad Pro)*/
+	body {
+		background: url(../images/me-background_B&W_large_vertical.jpg) no-repeat fixed; 
+		background-size: 100%;
+		background-color: black;
+	}
+	/* needed because of the picture background */
+	.intro {
+		color: black;
+	}
+}

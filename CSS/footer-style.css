@@ -1,0 +1,48 @@
+body {
+	display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+footer.footer {
+	bottom: 0;
+	position: absolute;
+
+	background-color: none;
+	width: 100%; 
+	padding-top: 1em; 
+	padding-bottom: 0.5em; 	
+	height: auto;
+}
+
+footer.fake {
+	position: static;
+	visibility: hidden; 
+}
+
+.contact-elem {
+	margin-right: 2%;
+	margin-left: 2%;
+}
+.contact-logo {
+	color: teal;
+	font-size: 3.5em; 
+}
+
+.list-contact {
+	padding: 0; 
+	margin: 0;
+}
+
+.copyright {
+	color: teal;
+	text-align: center;
+}
+
+#particles-js {
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  height:100%;
+  z-index: -10; 
+}

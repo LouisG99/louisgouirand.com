@@ -1,0 +1,15 @@
+.name {
+	font-family: "Courier";
+	font-weight: bold;
+	color: teal;
+}
+
+.navbar-text {
+	font-size: 1.5em;
+	text-align: center; 
+}
+
+ul.nav {
+	position: table; 
+	margin: 0 auto;
+}

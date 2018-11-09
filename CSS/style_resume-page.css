@@ -1,0 +1,104 @@
+*{
+	margin: 0px;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+body {
+	font-family: Helvetica;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.resume-header, .resume-content {
+	text-align: center; 
+	display: block; 
+}
+
+
+.intro {
+	width: 70%; 
+	margin-right: auto; 
+	margin-left: auto; 
+}
+
+.background {
+	margin:30px 0;
+	z-index: -1;
+	position: relative;
+}
+
+.section-title {
+	text-align: center;
+}
+
+.left_background, .right_background {
+	position: absolute;
+	height: 2200px;
+}
+.left_background {
+	background-color: teal; 
+}
+
+.right_background {
+	background-color: #F5F5F5; 
+	font-size: 200px; 
+	margin-left: 75%;  
+	float: right;
+}
+
+.date {
+	font-style: italic; 
+}
+
+.bottom-buffer {
+	margin-bottom: 2%; 
+	border-bottom: 4em solid white;
+}
+
+.skill_table {
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.center-elem {
+	margin: auto;
+	width: 25%;
+}
+
+.others {
+	padding-bottom: 2%;
+}
+
+@media only screen and (max-width: 999px) {
+	/* for devices with width smaller than horizontal iPad */
+
+	.left_background, .right_background {
+		visibility: hidden; 
+	}
+
+	.container-fluid.content, .others {
+		background-color: #F5F5F5;
+	}
+
+	.icon {
+		width: 50%;
+		margin: 0 auto;
+		text-align: center;
+	}	
+
+	.small-buffer {
+		margin-bottom: 5%;
+	}
+	.others {
+		width: 100%;
+		margin: 0;
+	}
+	.resume-content {
+		width: 80%;
+		margin-left: 10%;
+	}
+}
