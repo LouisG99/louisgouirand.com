@@ -14,15 +14,11 @@ window.onload = function(){
 			show(afterIntro[i]);
 		}
 
-		setTimeout(function(){
-			for(var i = 0; i < introList.length; i++) {
-				hide(introList[i]);
-			}
-		}, 1000);
-		// for(var i = 0; i < introList.length; i++) {
-		// 	hide(introList[i]);
-		// }
-
+		// setTimeout(function(){
+		// 	for(var i = 0; i < introList.length; i++) {
+		// 		hide(introList[i]);
+		// 	}
+		// }, 1000);
 	},false);
 }
 

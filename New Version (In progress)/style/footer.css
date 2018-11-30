@@ -1,0 +1,23 @@
+footer{
+	display: block;
+	text-align: center; 
+	color: white;
+	background-color: black; 
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+
+.contact-elem {
+	display: inline-block;
+	margin-right: 2%;
+	margin-left: 2%;
+	background-color: black;
+	margin-bottom: 0.5%;
+}
+.contact-logo {
+	font-size: 3.5em; 
+}
+.copyright {
+	color: teal;
+}
