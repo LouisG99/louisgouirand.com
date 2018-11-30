@@ -3,12 +3,109 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+body {
+	background: url(../images/SD_Dark_Color.jpeg) no-repeat fixed; 
+	background-size: 100%;
+	background-color: black;
+	font-family: Verdana; 
+}
+
+.static {
+	opacity: 0;
+}
+.container.intro {
+	text-align: center;
+	display: block; 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+}
+
+span.intro {
+	display: block;
+	text-transform: uppercase; 
+}
+#name-intro {
+	color: #cccccc;
+	font-size: 55px;
+	font-weight: bold;
+	margin-bottom: 0.5%;
+	animation: intro 3s 1; 
+	z-index: 1; 
+}
+#title-intro {
+	font-size: 25px;
+	font-weight: normal;
+	color: #330000;
+	z-index: 0;
+	animation: intro-title 3s 1; 
+}
+@keyframes intro {
+	0% {
+		opacity: 0;
+		margin-bottom: -1%;
+	}
+	25% {
+		opacity: 0.3;
+		letter-spacing: 6px;
+		margin-bottom: -1%;
+	}
+}
+@keyframes intro-title {
+	0% {
+		color: transparent;
+	}
+	75% {
+		color: transparent;
+	}
+}
+
+
+.navbar {
+	position: absolute;
+	top: 50%;
+	transform: translate(0%, -50%);
+	width: 13%;
+}
+a.nav {
+	width: 100%;
+	margin-left: -50%;
+	text-align: left;
+	font-size: 25px;
+	display: block;
+	text-decoration: none;
+	padding-bottom: 5%;
+	padding-top: 5%;
+	padding-left: 15%;
+	margin-bottom: 10%;
+	border-radius: 6px;
+	color: transparent;
+	transition: 0.5s all; 
+}
+a.nav:hover {
+	margin-left: -10%;
+	color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+/*
 html {
 	height: 100%;
 }
 body {
 	font-family: MuseoSans;
-	/*background: url(../images/me-background_B&W.jpg) no-repeat fixed; */
+	background: url(../images/me-background_B&W.jpg) no-repeat fixed; 
 	background-size: 100%;
 	background-color: black;
 	height: 100%;
@@ -17,7 +114,7 @@ body {
 
 .name-header {
 	color: rgb(230, 230, 230);
-	/*color: teal;*/
+	color: teal;
 	opacity: 0.8;
 	font-size: 60px;
 	text-align: center;
@@ -25,9 +122,9 @@ body {
 }
 .landing-content {
 	display: grid;
-	/*grid-template-columns: 1fr 1fr 1fr 1fr 1fr;*/
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	grid-template-columns: 1fr 3fr;
-	/*grid-template-rows: 100%; */
+	grid-template-rows: 100%; 
 	position: sticky;
 	grid-template-areas: "menu scroll";
 	height: 100%;
@@ -46,7 +143,7 @@ ul.menu {
 	grid-column: 1;
 	display: inline-block;
 	text-align: center;
-	/*height: 100%;*/
+	height: 100%;
 	position: fixed;
 	top: 30%;
 }
@@ -74,4 +171,4 @@ button.menu-elem {
 	color: rgba(200, 200, 200, 0.0);
 	grid-column: 2;
 	overflow: scroll;
-}
+}*/
