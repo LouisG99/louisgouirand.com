@@ -19,14 +19,14 @@
 
 		<body> 
 			<!-- INTRO animation with name and title -->
-			<div class="container intro"> 
+			<section class="container intro"> 
 				<span id="name-intro" class="intro">Louis Gouirand</span>
 				<span id="title-intro" class="intro">Computer Science student @ UofM</span>
-			</div>
+			</section>
 
 			<!-- SIDEBAR -->
 			<div class="static navbar">
-				<a href="#" class="nav" style="background-color: #660000;">About</a>
+				<a href="#" class="nav" style="background-color: #660000;" onclick="smoothScroll(document.getElementById('about-section'))">About</a>
 				<a href="#" class="nav" style="background-color: #00802b;">Experience</a>
 				<a href="#" class="nav" style="background-color: #003380;">Projects</a>
 				<a href="#" class="nav" style="background-color: #cc5200;">Contact</a>
@@ -39,12 +39,19 @@
 			</div>
 
 			<!-- VOID for when landing on page -->
-			<div class="void"></div>
+			<section class="void"></section>
 
 
-			<div class="static test">
-			</div>
+			<section id="about-section" class="about">
+				<span class="section-title">About</span>
+				<p class="about section-text">I am sophomore studying Computer Science in the College of Engineering at the University of Michigan.
+					<br>Currently looking for a 2019 Summer Software Internship
+				</p>
 
+			</section>
+
+			<section class="ye"></section>
+			<section class="about"></section>
 
 			<!-- FOOTER -->
 			<footer class="static">

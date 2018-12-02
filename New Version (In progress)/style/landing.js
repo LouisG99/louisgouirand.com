@@ -13,17 +13,8 @@ window.onload = function(){
 	    for(var i = 0; i < afterIntro.length; i++) {
 			show(afterIntro[i]);
 		}
-
-		// setTimeout(function(){
-		// 	for(var i = 0; i < introList.length; i++) {
-		// 		hide(introList[i]);
-		// 	}
-		// }, 1000);
 	},false);
 }
-
-
-
 
 function hide(elem){
 	elem.style.opacity = 0;
@@ -34,6 +25,31 @@ function show(elem){
 	elem.style.transition = "opacity 1s linear";
 }
 
+function scrollToSection(sectionId) {
+    document.getElementById(sectionId).scrollIntoView();
+}
+
+window.smoothScroll = function(target) {
+    var scrollContainer = target;
+    do { //find scroll container
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+
+    var targetY = 0;
+    do { //find the top of target relatively to the container
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop;
+    } while (target = target.offsetParent);
+    var x = 50;
+    scroll = function(c, a, b, i) {
+        i++; if (i > x) return;
+        c.scrollTop = a + (b - a) / x * i;
+        setTimeout(function(){ scroll(c, a, b, i); }, 20);
+    }
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+}
 
 // introName.addEventListener("animationend", function( event ) { 
 // 	console.log("triggered");
