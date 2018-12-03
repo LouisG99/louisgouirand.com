@@ -115,10 +115,6 @@ a.nav:hover {
 	color: #330000;
 }
 
-.grid {
-	display: grid;
-}
-
 .section-title {
 	display: block;
 	text-transform: uppercase; 
@@ -180,6 +176,7 @@ section.projects {
 }
 
 .projects.grid {
+	display: grid;
 	width: 80%;
 
 	height: 50%;
@@ -188,8 +185,42 @@ section.projects {
 	margin-top: 5%;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: lime;
 	grid-template-columns: repeat(3, 1fr);
+	grid-area: "TempIt CountUp Yeah";
+}
+.projects.box {
+	width: 90%;
+	height: 180px;
+	overflow: scroll;
+	margin-left: auto;
+	margin-right: auto;
+	grid-row-gap: 20px;
+	background-color: #e6e6e6;
+	border-radius: 5px;
+}
+.project.title {
+	background-color: black;
+	color: white;
+	height: 25%;
+	display: flex;
+	justify-content: center; 
+	align-items: center; 
+	font-size: 25px;
+	letter-spacing: 0.3em;
+}
+.project.description {
+	margin: 5%;
+}
+button.project.more {
+	color: #003380;
+	background: none;
+	border: none;
+	bottom: 0;
+	transition: color 0.3s linear;
+	font-size: 15px;
+}
+button.project.more:hover {
+	color: #0080ff;
 }
 
 
