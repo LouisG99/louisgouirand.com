@@ -114,8 +114,9 @@ a.nav:hover {
 	font-weight: normal;
 	color: #330000;
 }
-.test {
-	color: white;
+
+.grid {
+	display: grid;
 }
 
 .section-title {
@@ -126,7 +127,7 @@ a.nav:hover {
 	letter-spacing: 5px;
 	font-weight: 600;
 	text-align: center;
-	padding-top: 8%; 
+	padding-top: 15%; 
 }
 .section-text {
 	display: block;
@@ -139,11 +140,25 @@ a.nav:hover {
 	font-size: 25px;
 }
 
-.about {
+section.about {
 	height: 100vh;
 	display: block;
-	background: url(../images/Paris_color.jpeg) no-repeat fixed; 
+	background: url(../images/niagara_falls_me.jpeg) no-repeat fixed; 
 	background-size: 100%;
+}
+.about-wrapper {
+	width: 40%;
+	text-align: center;
+	margin-right: 50%;
+	margin-left: 10%;
+}
+
+p.about {
+	color: black;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	margin-top: 10%;
 }
 
 .ye {
@@ -151,7 +166,32 @@ a.nav:hover {
 	display: block;
 	background: url(../images/Nice_View_BW.jpeg) no-repeat fixed; 
 	background-size: 100%;
+
 }
+section.projects {
+	height: 100vh;
+	display: block;
+	background: url(../images/macbook_white_back.jpg) no-repeat fixed; 
+	background-size: 100%;
+}
+.section-title.projects {
+	color: black;
+	padding-top: 5%;
+}
+
+.projects.grid {
+	width: 80%;
+
+	height: 50%;
+
+	text-align: center;
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: lime;
+	grid-template-columns: repeat(3, 1fr);
+}
+
 
 /*
 html {
