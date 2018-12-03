@@ -51,6 +51,9 @@ window.smoothScroll = function(target) {
     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
 
+function unrollProject(projectName){
+	TO DO
+}
 // introName.addEventListener("animationend", function( event ) { 
 // 	console.log("triggered");
 //     for(var i = 0; i < afterIntro.size(); i++) {
