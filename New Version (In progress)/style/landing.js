@@ -52,8 +52,15 @@ window.smoothScroll = function(target) {
 }
 
 function unrollProject(projectName){
-	TO DO
+	console.log("yeet");
 }
+
+var projects = document.getElementsByClassName('projects box');
+console.log(1);
+for (var i = 0; i < projects.length; i++) {
+	console.log(i);
+}
+
 // introName.addEventListener("animationend", function( event ) { 
 // 	console.log("triggered");
 //     for(var i = 0; i < afterIntro.size(); i++) {
