@@ -1,3 +1,5 @@
+
+
 function makeVisible(list_elem) {
 	for(var i = 0; i < list_elem.size(); i++) {
 		list_elem[i].style.visbility = "visible";
@@ -14,6 +16,8 @@ window.onload = function(){
 			show(afterIntro[i]);
 		}
 	},false);
+
+	animation_projects();
 }
 
 function hide(elem){
@@ -55,11 +59,15 @@ function unrollProject(projectName){
 	console.log("yeet");
 }
 
-var projects = document.getElementsByClassName('projects box');
-console.log(1);
+var projects = document.getElementsByClassName("ye");
+console.log("wtf", projects.length);
 for (var i = 0; i < projects.length; i++) {
 	console.log(i);
+	var p = projects[i];
+	var id = p.getAttribute('id')
+	p.onmouseover = function(){move_up(id)};
 }
+
 
 // introName.addEventListener("animationend", function( event ) { 
 // 	console.log("triggered");
