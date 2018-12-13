@@ -213,9 +213,19 @@ section.work {
 	left:0;
 }
 
-.experience-link {
+button.experience-link {
 	background: none;
 	border: none;
+	display: block;
+	width: 100%;
+	text-align: left;
+	margin-bottom: 20%;
+
+}
+.company-link {
+	font-family: Verdana; 
+	font-size: 20px;
+	margin-left: 10%;
 }
 
 
