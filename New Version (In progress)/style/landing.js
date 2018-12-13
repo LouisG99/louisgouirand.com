@@ -17,7 +17,7 @@ window.onload = function(){
 		}
 	},false);
 
-	animation_projects();
+	// animation_projects();
 }
 
 function hide(elem){

@@ -114,6 +114,36 @@ a.nav:hover {
 	font-weight: normal;
 	color: #330000;
 }
+/* ///////////////////////// */
+/* CONTACT LINKS */
+.contact {
+	background: none;
+	position: fixed;
+	margin-left: 6.5%;
+	bottom: 0;
+	text-align: center;
+}
+.contact-list {
+	text-align: center;
+	list-style-type: none;
+}
+.contact-link {
+	font-size: 1.8em; 
+	margin-bottom: 0%;
+}
+.contact-logo {
+	color: #bfbfbf;
+	background-color: black: 
+}
+.vertical-line {
+	border-left: 1.5px solid #bfbfbf;
+	height: 12vh;
+	transform: translate(+50%);
+	  
+}
+
+/* ///////////////////////// */
+
 
 .section-title {
 	display: block;
@@ -157,13 +187,38 @@ p.about {
 	margin-top: 10%;
 }
 
-.ye {
+section.work {
 	height: 100vh;
 	display: block;
-	background: url(../images/Nice_View_BW.jpeg) no-repeat fixed; 
+	background: url(../images/chicago_sunset.jpg) no-repeat fixed; 
 	background-size: 100%;
-
 }
+.section-title.work {
+	padding-top: 5%;
+}
+.work-container {
+	width: 60%;
+	margin-right: auto;
+	margin-left: auto;
+	height: 50vh;
+	margin-top: 5%;
+	background-color: green;
+}
+.work-bar {
+	list-style-type: none;
+	background-color: red;
+	display: inline-block;
+	width: 20%;
+	height: 100%;
+	left:0;
+}
+
+.experience-link {
+	background: none;
+	border: none;
+}
+
+
 section.projects {
 	height: 100vh;
 	display: block;
