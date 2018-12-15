@@ -255,19 +255,22 @@ button.experience-link:hover {
 	grid-column: 2;
 	display: block;
 	background-color: green;
-	/*width: 78%;*/
 	height: 100%;
 }
 .work-descript{
 	visibility: hidden;
 	position: absolute;
 }
+.company-link {
+	font-family: Verdana; 
+	font-size: 20px;
+	margin-left: 10%;
+}
 
 .work-xp-descript {
 	width: 80%;
 	margin-left: 20%;
 	list-style-type: none;
-
 }
 /* ///////////////////////// */
 
