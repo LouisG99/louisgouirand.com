@@ -18,6 +18,9 @@ body {
 .static {
 	opacity: 0;
 }
+
+/* ///////////////////////// */
+/* INTRO */
 .container.intro {
 	text-align: center;
 	display: block; 
@@ -64,7 +67,10 @@ span.intro {
 		color: transparent;
 	}
 }
+/* ///////////////////////// */
 
+/* ///////////////////////// */
+/* NAVBAR */
 .navbar {
 	position: fixed;
 	top: 50%;
@@ -115,6 +121,8 @@ a.nav:hover {
 	color: #330000;
 }
 /* ///////////////////////// */
+
+/* ///////////////////////// */
 /* CONTACT LINKS */
 .contact {
 	background: none;
@@ -141,10 +149,10 @@ a.nav:hover {
 	transform: translate(+50%);
 	  
 }
-
 /* ///////////////////////// */
 
-
+/* ///////////////////////// */
+/* GENERAL SECTIONS */
 .section-title {
 	display: block;
 	text-transform: uppercase; 
@@ -165,7 +173,10 @@ a.nav:hover {
 	color: #ffffff;
 	font-size: 25px;
 }
+/* ///////////////////////// */
 
+/* ///////////////////////// */
+/* ABOUT SECTION */
 section.about {
 	height: 100vh;
 	display: block;
@@ -186,7 +197,10 @@ p.about {
 	padding: 0;
 	margin-top: 10%;
 }
+/* ///////////////////////// */
 
+/* ///////////////////////// */
+/* WORK EXPERIENCE */
 section.work {
 	height: 100vh;
 	display: block;
@@ -202,23 +216,63 @@ section.work {
 	margin-left: auto;
 	height: 50vh;
 	margin-top: 5%;
-	background-color: green;
+	/*background-color: green;*/
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	/*grid-template-areas: 'scroll content content content content'*/
 }
 .work-bar {
+	grid-column: 1;
 	list-style-type: none;
 	background-color: red;
-	display: inline-block;
-	width: 20%;
+	display: block;
+	/*width: 20%;*/
 	height: 100%;
 	left:0;
 }
 
-.experience-link {
+button.experience-link {
 	background: none;
 	border: none;
+	display: block;
+	width: 100%;
+	text-align: left;
+	padding-bottom: 20%;
+	padding-top: 5%;
+}
+button.experience-link:hover {
+	background-color: lime;
+}
+.company-link {
+	display: inline;
+	height: 100%;
+	font-family: Verdana; 
+	font-size: 20px;
+	padding-left: 10%;
 }
 
+.descript-container {
+	grid-column: 2;
+	display: block;
+	background-color: green;
+	/*width: 78%;*/
+	height: 100%;
+}
+.work-descript{
+	visibility: hidden;
+	position: absolute;
+}
 
+.work-xp-descript {
+	width: 80%;
+	margin-left: 20%;
+	list-style-type: none;
+
+}
+/* ///////////////////////// */
+
+/* ///////////////////////// */
+/* PROJECTS */
 section.projects {
 	height: 100vh;
 	display: block;
@@ -307,3 +361,4 @@ section.projects {
 	font-size: 25px;
 	text-align: right;
 }
+/* ///////////////////////// */

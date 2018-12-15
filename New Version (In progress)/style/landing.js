@@ -1,11 +1,8 @@
-
-
 function makeVisible(list_elem) {
 	for(var i = 0; i < list_elem.size(); i++) {
 		list_elem[i].style.visbility = "visible";
 	}
 }
-
 
 window.onload = function(){ 
 	var introList = document.getElementsByClassName("intro");
@@ -16,8 +13,6 @@ window.onload = function(){
 			show(afterIntro[i]);
 		}
 	},false);
-
-	// animation_projects();
 }
 
 function hide(elem){
@@ -66,6 +61,23 @@ for (var i = 0; i < projects.length; i++) {
 	var p = projects[i];
 	var id = p.getAttribute('id')
 	p.onmouseover = function(){move_up(id)};
+}
+
+function displayWorkExp(companyName) {
+	console.log("physics");
+	console.log(companyName);
+
+	var xps = document.getElementsByClassName("work-descript");
+	for (var i = 0; i < xps.length; i++) {
+		var elem = xps[i]; 
+		// elem.style.color = 
+		if (elem.id === companyName) {
+			elem.style.visibility = "visible"; 
+		}
+		else {
+			elem.style.visibility = "hidden";
+		}
+	}
 }
 
 

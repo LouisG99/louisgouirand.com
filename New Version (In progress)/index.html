@@ -40,7 +40,7 @@
 			</div>
 
 			<!-- Contact Links -->
-			<div class=" contact">
+			<div class="static contact">
 				<ul class="contact-list">
 		        	<li class="contact-link">
 						<a href="https://www.linkedin.com/in/louisgrd/" target="blank">
@@ -90,12 +90,27 @@
 
 				<div class="work-container">
 					<ul class="work-bar"> 
-						<button class="experience-link">Next Internship</li>
-						<button class="experience-link">Monaco Informatique Service</li>
-						<button class="experience-link">Deloitte</li>
+						<button class="experience-link" onclick="displayWorkExp('CME')"><span class="company-link">CME?</span></button>
+						<button class="experience-link" onclick="displayWorkExp('MIS')"><span class="company-link">MIS</span></button>
+						<button class="experience-link" onclick="displayWorkExp('Deloitte')"><span class="company-link" >Deloitte</span></button>
 					</ul>
-					h
+					<div class="descript-container">
+						<div class="work-descript" id="CME">
+							<span class="job-title">Software Engineering Intern </span><span class="company-name">CME?</span>
+							<br> 
+							<span class="work-xp-dates">June 2019 - August 2019</span>
+
+							<ul class="work-xp-descript">
+								<li><i class="fa-li fa fa-check-square"></i>I watch anime</li>
+							</ul>
+						</div>
+
+						<div class="work-descript" id="MIS">Hello MIS</div>
+
+						<div class="work-descript" id="Deloitte">Hello Deloitte</div>
+					</div>
 				</div> 
+				
 
 			</section>
 
