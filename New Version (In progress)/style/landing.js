@@ -90,6 +90,26 @@ function displayWorkExp(companyName) {
 			link.style.borderLeft = "5px solid grey";
 		}
 	}
+
+	slide_work_bar(companyName);
+}
+
+function slide_work_bar(companyGoal) {
+	var elem = document.getElementsByClassName("experience-link "+companyGoal)[0];
+	var height = document.getElementsByClassName("experience-link")[0].clientHeight;
+	console.log(height);
+
+	
+	var id = setInterval(frame, 5);
+	var pos = elem.style.top; 
+	var incr = pos ? 1 : -1;
+	function frame() {
+		if ()
+	}
+
+	var dh = elem.style.top;
+
+
 }
 
 
