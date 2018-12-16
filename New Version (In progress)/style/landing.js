@@ -73,9 +73,21 @@ function displayWorkExp(companyName) {
 		// elem.style.color = 
 		if (elem.id === companyName) {
 			elem.style.visibility = "visible"; 
+
 		}
 		else {
 			elem.style.visibility = "hidden";
+		}
+	}
+
+	var coNames = ['CME', 'MIS', 'Deloitte'];
+	for (var i = 0; i < coNames.length; i++) {
+		var link = document.getElementsByClassName("experience-link "+coNames[i])[0];
+		if (coNames[i] === companyName) {
+			link.style.borderLeft = "5px solid black";
+		}
+		else {
+			link.style.borderLeft = "5px solid grey";
 		}
 	}
 }

@@ -3,6 +3,9 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+*:focus {
+    outline: none;
+}
 
 body {
 	background-color: black;
@@ -224,7 +227,7 @@ section.work {
 .work-bar {
 	grid-column: 1;
 	list-style-type: none;
-	background-color: red;
+	/*background-color: rgba(240, 240, 240, 0.25);*/
 	display: block;
 	/*width: 20%;*/
 	height: 100%;
@@ -239,38 +242,73 @@ button.experience-link {
 	text-align: left;
 	padding-bottom: 20%;
 	padding-top: 5%;
+	/*border-radius: 5px;*/
+
+	border-left: 5px solid grey;
 }
 button.experience-link:hover {
-	background-color: lime;
+	background-color: #cceeff;
+	opacity: 0.8;
 }
 .company-link {
 	display: inline;
 	height: 100%;
 	font-family: Verdana; 
-	font-size: 20px;
+	font-size: 18px;
 	padding-left: 10%;
 }
 
 .descript-container {
 	grid-column: 2;
 	display: block;
-	background-color: green;
+	/*background-color: green;*/
 	height: 100%;
 }
 .work-descript{
 	visibility: hidden;
 	position: absolute;
+	padding-left: 2%;
+	width: 50%;
 }
 .company-link {
 	font-family: Verdana; 
 	font-size: 20px;
 	margin-left: 10%;
 }
-
+.job-title, .company-name {
+	font-size: 20px;
+	font-weight: bold;
+}
+.company-name {
+	color: #0077b3;
+}
 .work-xp-descript {
 	width: 80%;
-	margin-left: 20%;
+	/*margin-left: 15%;*/
 	list-style-type: none;
+	padding-left: 5%;
+	padding-top: 2em;
+}
+.bullet {
+	left: 5%;
+	color: maroon;
+	margin-right: 1em;
+}
+.work-bullet {
+	padding-bottom: 1%;
+	color: #333333;
+}
+a.underline {
+	text-decoration: none;
+}
+
+a.underline:hover {
+	text-decoration: underline;
+}
+
+
+#MIS {
+	visibility: visible;
 }
 /* ///////////////////////// */
 
