@@ -229,6 +229,8 @@ section.work {
 	height: 100%;
 	grid-column: 1;
 	background-color: red;
+	margin:0;
+	padding: 0;
 }
 .work-bar {
 	grid-column: 2;
@@ -250,7 +252,7 @@ button.experience-link {
 	padding-top: 5%;
 	/*border-radius: 5px;*/
 
-	border-left: 5px solid grey;
+	border-left: 5px solid transparent;
 }
 button.experience-link:hover {
 	background-color: #cceeff;
@@ -267,7 +269,6 @@ button.experience-link:hover {
 .descript-container {
 	grid-column: 3;
 	display: block;
-	/*background-color: green;*/
 	height: 100%;
 }
 .work-descript{
