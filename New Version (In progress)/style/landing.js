@@ -126,6 +126,8 @@ function plusSlides(incr) {
 	var nbr_slides = imgs.length;
 	console.log(nbr_slides);
 
+	var prev_slide_i = slide_i; // for maps
+
 	imgs[slide_i].style.opacity = "0";
 
 	if (slide_i===0 && incr<0) {
@@ -142,52 +144,86 @@ function plusSlides(incr) {
 	}
 
 	// take care google maps now
-	changeMap(loc_index[slide_i]);
+	changeCenter(loc_coords[loc_index[prev_slide_i]], 
+		loc_coords[loc_index[slide_i]], false);
 }
 
 function initMap() {
-  changeMap(loc_index[0]);
-}
-
-function changeMap(location) {
-	var center = loc_coords[location];
-	var lat = center['lat']; 
-	var lng = center['lng'];
+	changeCenter(loc_coords[loc_index[0]], 
+		loc_coords[loc_index[0]], true);
+	return;
 
 	var map = new google.maps.Map(
-	document.getElementById('GoogleMap'), {zoom: 5, center: center});
+		document.getElementById('GoogleMap'), {zoom: 5, center: loc_index[0]});
 
-	var marker = new google.maps.Marker({position: center, map: map});
+	var marker = new google.maps.Marker({position: goal, map: map});
 
-	// marker.setPosition(new google.maps.LatLng(lat, lng));
-	// map.panTo(new google.maps.LatLng(lat, lng));
+}
+
+function changeCenter(origin, goal, init) {
+	if (init) {
+		var map = new google.maps.Map(
+	document.getElementById('GoogleMap'), {zoom: 5, center: goal});
+
+		var marker = new google.maps.Marker({position: goal, map: map});
+		return;
+	}
+
+
+	// var center_o = loc_coords[origin];
+	// var lat_o = center['lat']; 
+	// var lng_o = center['lng'];
+
+	// var center_g = loc_coords[goal];
+	// var lat_g = center['lat']; 
+	// var lng_g = center['lng'];
+
+	var map = new google.maps.Map(
+	document.getElementById('GoogleMap'), {zoom: 5, center: origin});
+
+	var d_zoom = 0.01; 
+
+	var zooming_out = setInterval(function() {
+		if (map.getZoom() == 1.00) {
+			clearInterval(zooming_out);
+		}
+		else {
+			map = new google.maps.Map(
+		document.getElementById('GoogleMap'), {zoom: map.getZoom()-d_zoom, 
+			center: origin});
+		}
+	}, 100); 
+
+	// change center
+	map = new google.maps.Map(
+	document.getElementById('GoogleMap'), {zoom: 1, 
+		center: goal});
+
+
+	// zooming out 
+	var zooming_out = setInterval(function() {
+		if (map.getZoom() == 5.00) {
+			clearInterval(zooming_out);
+		}
+		else {
+			map = new google.maps.Map(
+		document.getElementById('GoogleMap'), {zoom: map.getZoom()+d_zoom, 
+			center: goal});
+		}
+	}, 100); 
+
+	// Zooming out 
+	// use set interval methods:
+		// zoom out without changin center, 
+		// change center without zooming
+		// zooom in again and place marker
+
+	// zooming out
+
+	// var map = new google.maps.Map(
+	// document.getElementById('GoogleMap'), {zoom: 5, center: center});
+
+	var marker = new google.maps.Marker({position: goal, map: map});
 }
 
 
-
-
-function slide_work_bar(companyGoal) {
-	// var elem = document.getElementsByClassName("experience-link "+companyGoal)[0];
-	// var height = document.getElementsByClassName("experience-link")[0].clientHeight;
-	// // console.log(height);
-
-	// var container = document.getElementById("work-cursor");
-	// container.style.height = height+'px'; 
-
-
-	
-	// var id = setInterval(frame, 100);
-	// var pos = elem.style.top; 
-	// var incr = pos ? 1 : -1;
-
-	// console.log(pos);
-	// function frame() {
-	// 	container.style.top += "100px";
-	// 	container.style.bottom += "100px";
-	// 	// console.log(elem.style.top);
-	// }
-
-	// var dh = elem.style.top;
-
-
-}
