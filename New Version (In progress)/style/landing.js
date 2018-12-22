@@ -1,3 +1,8 @@
+/* Add SVG graphs on first section
+	Add timeline that goes on as scroll down the website 
+	Add a carousel for some cool pictures
+*/
+
 function makeVisible(list_elem) {
 	for(var i = 0; i < list_elem.size(); i++) {
 		list_elem[i].style.visbility = "visible";
@@ -14,7 +19,8 @@ window.onload = function(){
 
 	introName.addEventListener("animationend", function( event ) { 
 	    for(var i = 0; i < afterIntro.length; i++) {
-			show(afterIntro[i]);
+	    	show(afterIntro[i]);
+
 		}
 	},false);
 }
@@ -26,6 +32,7 @@ function hide(elem){
 function show(elem){
 	elem.style.opacity = 1;
 	elem.style.transition = "opacity 1s linear";
+	console.log("done");
 }
 
 function scrollToSection(sectionId) {
@@ -98,7 +105,29 @@ function displayWorkExp(companyName) {
 	slide_work_bar(companyName);
 }
 
+//// CAROUSEL 
+var slide_i = 0; 
 
+function plusSlides(incr) {
+	var imgs = document.getElementsByClassName("image-fade");
+	var nbr_slides = imgs.length;
+	console.log(nbr_slides);
+
+	imgs[slide_i].style.opacity = "0";
+
+	if (slide_i===0 && incr<0) {
+		imgs[nbr_slides-1].style.opacity = "1";
+		slide_i = nbr_slides-1;
+	}
+	else if (slide_i===nbr_slides-1 && incr>0) {
+		imgs[0].style.opacity = "1";
+		slide_i = 0;
+	}
+	else {
+		imgs[slide_i+incr].style.opacity = "1";
+		slide_i += incr;
+	}
+}
 
 function slide_work_bar(companyGoal) {
 	// var elem = document.getElementsByClassName("experience-link "+companyGoal)[0];

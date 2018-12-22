@@ -11,6 +11,12 @@ body {
 	background-color: black;
 	font-family: Verdana; 
 }
+
+section {
+	height: 100vh;
+	display: block;
+}
+
 .void {
 	height: 100vh;
 	display: block;
@@ -145,6 +151,10 @@ a.nav:hover {
 .contact-logo {
 	color: #bfbfbf;
 	background-color: black: 
+	transition: color 0.3s ease-in;
+}
+.contact-logo:hover {
+	color: #2d5986;
 }
 .vertical-line {
 	border-left: 1.5px solid #bfbfbf;
@@ -253,6 +263,7 @@ button.experience-link {
 	/*border-radius: 5px;*/
 
 	border-left: 5px solid transparent;
+	transition: border-color 0.3s ease-in;
 }
 button.experience-link:hover {
 	background-color: #cceeff;
@@ -314,7 +325,7 @@ a.underline:hover {
 }
 
 
-#MIS {
+#CME {
 	visibility: visible;
 }
 /* ///////////////////////// */
@@ -410,3 +421,218 @@ section.projects {
 	text-align: right;
 }
 /* ///////////////////////// */
+
+/* ///////////////////////// */
+/* CAROUSEL */
+section.pictures {
+	background: url(../images/plain_sunset.jpg) no-repeat fixed;
+	background-size: 100%;
+}
+.section-title.pictures {
+	padding-top: 5%;
+}
+.carousel-container {
+	position: relative;
+	/*height: 70%;*/
+	width: 100%;
+	margin-top: 4%;
+	margin-left: 20%;
+
+	margin-right: auto;
+	margin-left: auto;
+	background-color: red;
+	text-align: center;
+}
+.image.fade {
+	height: 100%;
+	/*width: 50%;*/
+	/*background-color: black;*/
+/*	margin-left: auto;
+	margin-right: auto;*/
+	position: relative;
+	/*text-align: center;*/
+}
+
+.image-fade {
+	width: 25%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: opacity 0.6s ease;
+	opacity: 0;
+
+	left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: 5%; 
+}
+.image-fade.horizontal {
+	width: 38%;
+}
+.img-carousel {
+	/*height: 100%;*/
+	width: 100%;
+
+
+/*	position: absolute;
+	top: 0;
+	left: 0;
+	transition: opacity 0.6s ease;
+	opacity: 0;
+*/
+	z-index: 1;
+}
+#first-carousel {
+	opacity: 1;
+}
+
+a.prev, a.next {
+	z-index: 2;
+	top: 50%;
+	font-size: 20px;
+	color: white;
+	position: absolute;
+}
+a.prev {
+	opacity: 1;
+	left: 0;
+}
+a.next {
+	right: 0;
+}
+
+/* ///////////////////////// 
+
+/* ///////////////////////// */
+/* OTHERS */
+section.trips {
+	height: 100vh;
+	width: 100vw;
+	display: block;
+	/*background: url(../images/dark_macbook.jpg) no-repeat fixed; */
+	background-color: black;
+	background-size: 100%;
+}
+.carousel-trips {
+	margin-left: 15%;
+	height: 80vh;
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+	overflow-x: scroll;
+	overflow-y: none;
+	margin-left: none;
+
+	width: 80vw;
+	/*overflow: scroll;*/
+
+}
+
+.trips-container {
+	margin-top: 10%;
+	/*margin-bottom: 5%;*/
+	width: 100%;
+	height: 80vh; 
+	overflow-y: scroll;
+	display: grid; 
+	grid-template-columns: 1fr 1fr 1fr; 
+	/*grid-template-rows: 20vh;*/
+}
+.trip {
+	display: block;
+	/*width: 33%;
+	height: 50vh;*/
+	padding: 0;
+	margin: 0;
+	border-radius: 3px;
+/*	grid-row: 1;
+	grid-column: 1;*/
+/*	width: 33.3%;
+	height: 100%;*/
+
+}
+.trip:hover {
+	/*opacity: 0.5;*/
+}
+.trip-descript {
+	height: 100vh;
+	width: 100%;
+	display: block;
+}
+/*.trip1 {
+	grid-column: 1;
+}*/
+.trip {
+	height: 80vh;
+	overflow: none;
+}
+#trip1 { 
+	grid-column: 1; 
+	/*height: 20vh;*/
+	background:  url(../images/iceland_runner.JPG) no-repeat ; 
+	background-size: 100%;
+}
+/*.trip2 {
+	grid-column: 2;
+}*/
+#trip2 { 
+	grid-column: 2;
+	background:  url(../images/diag_sunset.JPG) no-repeat ; 
+	background-size: 100%;
+}
+/*.trip2 {
+	grid-column: 3;
+}*/
+#trip3 { 
+	grid-column: 3;
+	background:  url(../images/dark_arcade.jpg) no-repeat ; 
+	background-size: 100%;
+}
+#trip4 { 
+	grid-column: 1; 
+	grid-row: 2;
+	background:  url(../images/iceland_runner.JPG) no-repeat ; 
+	background-size: 100%;
+}
+/*.trip2 {
+	grid-column: 2;
+}*/
+#trip5 { 
+	grid-column: 2;
+	grid-row: 2;
+	background:  url(../images/diag_sunset.JPG) no-repeat ; 
+	background-size: 100%;
+}
+/*.trip2 {
+	grid-column: 3;
+}*/
+#trip6 { 
+	grid-column: 3;
+	grid-row: 2;
+	background:  url(../images/dark_arcade.jpg) no-repeat ; 
+	background-size: 100%;
+}
+
+
+
+
+
+
+
+/*button.album-popup {
+	margin-top: 5%;
+	background: none;
+	border: black;
+	border-radius: 5px;
+}*/
+
+footer {
+	bottom: 0;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	background-color: #a6a6a6;
+	text-align: center;
+}
+/* ///////////////////////// */
+
+
+
