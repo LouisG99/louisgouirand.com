@@ -102,7 +102,7 @@ function displayWorkExp(companyName) {
 		}
 	}
 
-	slide_work_bar(companyName);
+	// slide_work_bar(companyName);
 }
 
 //// CAROUSEL 

@@ -31,15 +31,17 @@ section {
 /* ///////////////////////// */
 /* INTRO */
 .container.intro {
-	text-align: center;
-	display: block; 
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 100%;
+    top: 38%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
-
+.intro-contain2 {
+	width: 100%;
+	margin-top: 50vh;
+}
 span.intro {
 	display: block;
 	text-transform: uppercase; 
@@ -435,13 +437,12 @@ section.pictures {
 	position: relative;
 	/*height: 70%;*/
 	width: 100%;
+	min-height: 50vh;
 	margin-top: 4%;
 	margin-left: 20%;
 
 	margin-right: auto;
 	margin-left: auto;
-	background-color: red;
-	text-align: center;
 }
 .image.fade {
 	height: 100%;
@@ -454,7 +455,7 @@ section.pictures {
 }
 
 .image-fade {
-	width: 25%;
+	width: 28%;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -462,25 +463,22 @@ section.pictures {
 	opacity: 0;
 
 	left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: 5%; 
+	right: 0; 
+	margin-left: 15%; 
+	margin-right: auto; 
 }
 .image-fade.horizontal {
-	width: 38%;
+	width: 35%;
 }
 .img-carousel {
-	/*height: 100%;*/
 	width: 100%;
-
-
-/*	position: absolute;
-	top: 0;
-	left: 0;
-	transition: opacity 0.6s ease;
-	opacity: 0;
-*/
 	z-index: 1;
+
+	border-radius: 2%;
+    overflow:hidden;
+    border: 3px solid #bfbfbf;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 #first-carousel {
 	opacity: 1;
@@ -501,121 +499,24 @@ a.next {
 	right: 0;
 }
 
+/*.worldmap {
+	display: inline-block;
+	width: 40%;
+	margin-left: 60%; 
+}*/
+
+#GoogleMap {
+	display: inline-block;
+	width: 35%;
+	height: 50%;
+	margin-left: 60%;
+	background-color: grey;
+}
+
 /* ///////////////////////// 
 
 /* ///////////////////////// */
 /* OTHERS */
-section.trips {
-	height: 100vh;
-	width: 100vw;
-	display: block;
-	/*background: url(../images/dark_macbook.jpg) no-repeat fixed; */
-	background-color: black;
-	background-size: 100%;
-}
-.carousel-trips {
-	margin-left: 15%;
-	height: 80vh;
-	margin-top: 10vh;
-	margin-bottom: 10vh;
-	overflow-x: scroll;
-	overflow-y: none;
-	margin-left: none;
-
-	width: 80vw;
-	/*overflow: scroll;*/
-
-}
-
-.trips-container {
-	margin-top: 10%;
-	/*margin-bottom: 5%;*/
-	width: 100%;
-	height: 80vh; 
-	overflow-y: scroll;
-	display: grid; 
-	grid-template-columns: 1fr 1fr 1fr; 
-	/*grid-template-rows: 20vh;*/
-}
-.trip {
-	display: block;
-	/*width: 33%;
-	height: 50vh;*/
-	padding: 0;
-	margin: 0;
-	border-radius: 3px;
-/*	grid-row: 1;
-	grid-column: 1;*/
-/*	width: 33.3%;
-	height: 100%;*/
-
-}
-.trip:hover {
-	/*opacity: 0.5;*/
-}
-.trip-descript {
-	height: 100vh;
-	width: 100%;
-	display: block;
-}
-/*.trip1 {
-	grid-column: 1;
-}*/
-.trip {
-	height: 80vh;
-	overflow: none;
-}
-#trip1 { 
-	grid-column: 1; 
-	/*height: 20vh;*/
-	background:  url(../images/iceland_runner.JPG) no-repeat ; 
-	background-size: 100%;
-}
-/*.trip2 {
-	grid-column: 2;
-}*/
-#trip2 { 
-	grid-column: 2;
-	background:  url(../images/diag_sunset.JPG) no-repeat ; 
-	background-size: 100%;
-}
-/*.trip2 {
-	grid-column: 3;
-}*/
-#trip3 { 
-	grid-column: 3;
-	background:  url(../images/dark_arcade.jpg) no-repeat ; 
-	background-size: 100%;
-}
-#trip4 { 
-	grid-column: 1; 
-	grid-row: 2;
-	background:  url(../images/iceland_runner.JPG) no-repeat ; 
-	background-size: 100%;
-}
-/*.trip2 {
-	grid-column: 2;
-}*/
-#trip5 { 
-	grid-column: 2;
-	grid-row: 2;
-	background:  url(../images/diag_sunset.JPG) no-repeat ; 
-	background-size: 100%;
-}
-/*.trip2 {
-	grid-column: 3;
-}*/
-#trip6 { 
-	grid-column: 3;
-	grid-row: 2;
-	background:  url(../images/dark_arcade.jpg) no-repeat ; 
-	background-size: 100%;
-}
-
-
-
-
-
 
 
 /*button.album-popup {
