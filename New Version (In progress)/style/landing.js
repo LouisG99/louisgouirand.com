@@ -107,6 +107,19 @@ function displayWorkExp(companyName) {
 
 //// CAROUSEL 
 var slide_i = 0; 
+const loc_index = {
+	0: 'Peninsula Iceland', 
+	1: 'Umich', 
+	2: 'Copenhagen', 
+	3: 'Chicago'
+};
+
+const loc_coords = { 
+	'Umich': {lat: 42.1642, lng: -83.44177}, 
+	'Peninsula Iceland': {lat: 64.908068, lng: -23.112769}, 
+	'Copenhagen': {lat: 55.676707, lng: 12.584278}, 
+	'Chicago': {lat: 41.882788, lng: -87.623342}
+};
 
 function plusSlides(incr) {
 	var imgs = document.getElementsByClassName("image-fade");
@@ -127,7 +140,31 @@ function plusSlides(incr) {
 		imgs[slide_i+incr].style.opacity = "1";
 		slide_i += incr;
 	}
+
+	// take care google maps now
+	changeMap(loc_index[slide_i]);
 }
+
+function initMap() {
+  changeMap(loc_index[0]);
+}
+
+function changeMap(location) {
+	var center = loc_coords[location];
+	var lat = center['lat']; 
+	var lng = center['lng'];
+
+	var map = new google.maps.Map(
+	document.getElementById('GoogleMap'), {zoom: 5, center: center});
+
+	var marker = new google.maps.Marker({position: center, map: map});
+
+	// marker.setPosition(new google.maps.LatLng(lat, lng));
+	// map.panTo(new google.maps.LatLng(lat, lng));
+}
+
+
+
 
 function slide_work_bar(companyGoal) {
 	// var elem = document.getElementsByClassName("experience-link "+companyGoal)[0];
