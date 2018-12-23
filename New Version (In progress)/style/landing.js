@@ -32,7 +32,6 @@ function hide(elem){
 function show(elem){
 	elem.style.opacity = 1;
 	elem.style.transition = "opacity 1s linear";
-	console.log("done");
 }
 
 function scrollToSection(sectionId) {
@@ -148,82 +147,62 @@ function plusSlides(incr) {
 		loc_coords[loc_index[slide_i]], false);
 }
 
+var map = null;
+var marker = null;
+
 function initMap() {
 	changeCenter(loc_coords[loc_index[0]], 
 		loc_coords[loc_index[0]], true);
 	return;
 
-	var map = new google.maps.Map(
-		document.getElementById('GoogleMap'), {zoom: 5, center: loc_index[0]});
-
-	var marker = new google.maps.Marker({position: goal, map: map});
+	marker = new google.maps.Marker({position: goal, map: map});
 
 }
 
 function changeCenter(origin, goal, init) {
 	if (init) {
-		var map = new google.maps.Map(
+		map = new google.maps.Map(
 	document.getElementById('GoogleMap'), {zoom: 5, center: goal});
 
-		var marker = new google.maps.Marker({position: goal, map: map});
+		marker = new google.maps.Marker({position: goal, map: map});
 		return;
 	}
 
+	const d_zoom = 1; 
+	const min_zoom = 1;
+	const max_zoom = 5;
 
-	// var center_o = loc_coords[origin];
-	// var lat_o = center['lat']; 
-	// var lng_o = center['lng'];
+	var zoom_out_done = false;
+	var zoom_in_done = false;
 
-	// var center_g = loc_coords[goal];
-	// var lat_g = center['lat']; 
-	// var lng_g = center['lng'];
+	// in case centered somewhere else
+	map.setCenter(origin);
+	map.setZoom(5);
 
-	var map = new google.maps.Map(
-	document.getElementById('GoogleMap'), {zoom: 5, center: origin});
+	var zooming = setInterval(function() {
 
-	var d_zoom = 0.01; 
-
-	var zooming_out = setInterval(function() {
-		if (map.getZoom() == 1.00) {
-			clearInterval(zooming_out);
+		if (zoom_in_done && zoom_out_done) {
+			console.log("effect done");
+			clearInterval(zooming)
 		}
-		else {
-			map = new google.maps.Map(
-		document.getElementById('GoogleMap'), {zoom: map.getZoom()-d_zoom, 
-			center: origin});
+		else if (!zoom_out_done) {
+			console.log("zooming out");
+			map.setZoom(map.getZoom()-d_zoom);
 		}
-	}, 100); 
-
-	// change center
-	map = new google.maps.Map(
-	document.getElementById('GoogleMap'), {zoom: 1, 
-		center: goal});
-
-
-	// zooming out 
-	var zooming_out = setInterval(function() {
-		if (map.getZoom() == 5.00) {
-			clearInterval(zooming_out);
+		else if (zoom_out_done) {
+			console.log("zooming in");
+			map.setZoom(map.getZoom()+d_zoom);
 		}
-		else {
-			map = new google.maps.Map(
-		document.getElementById('GoogleMap'), {zoom: map.getZoom()+d_zoom, 
-			center: goal});
+
+		if (map.getZoom() == min_zoom) {
+			zoom_out_done = true;
+			map.setCenter(goal);
+			marker = new google.maps.Marker({position: goal, map: map});
 		}
-	}, 100); 
+		else if (zoom_out_done && map.getZoom()==max_zoom) {
+			zoom_in_done = true;
+		}
 
-	// Zooming out 
-	// use set interval methods:
-		// zoom out without changin center, 
-		// change center without zooming
-		// zooom in again and place marker
-
-	// zooming out
-
-	// var map = new google.maps.Map(
-	// document.getElementById('GoogleMap'), {zoom: 5, center: center});
-
-	var marker = new google.maps.Marker({position: goal, map: map});
+	}, 150); 
 }
-
 
