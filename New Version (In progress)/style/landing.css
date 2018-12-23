@@ -494,7 +494,8 @@ a.next {
     width: 30%;  
     border-radius: 5px;
     margin-left: 55%;
-    padding-top: 5%;
+    margin-top: 10vh; 
+    position: absolute;
 }
 
 /* ///////////////////////// 

@@ -65,22 +65,16 @@ function unrollProject(projectName){
 }
 
 var projects = document.getElementsByClassName("ye");
-console.log("wtf", projects.length);
 for (var i = 0; i < projects.length; i++) {
-	// console.log(i);
 	var p = projects[i];
 	var id = p.getAttribute('id')
 	p.onmouseover = function(){move_up(id)};
 }
 
 function displayWorkExp(companyName) {
-	// console.log("physics");
-	// console.log(companyName);
-
 	var xps = document.getElementsByClassName("work-descript");
 	for (var i = 0; i < xps.length; i++) {
 		var elem = xps[i]; 
-		// elem.style.color = 
 		if (elem.id === companyName) {
 			elem.style.visibility = "visible"; 
 
@@ -100,8 +94,6 @@ function displayWorkExp(companyName) {
 			link.style.borderLeft = "5px solid transparent";
 		}
 	}
-
-	// slide_work_bar(companyName);
 }
 
 //// CAROUSEL 
@@ -123,7 +115,6 @@ const loc_coords = {
 function plusSlides(incr) {
 	var imgs = document.getElementsByClassName("image-fade");
 	var nbr_slides = imgs.length;
-	console.log(nbr_slides);
 
 	var prev_slide_i = slide_i; // for maps
 
@@ -141,7 +132,6 @@ function plusSlides(incr) {
 		imgs[slide_i+incr].style.opacity = "1";
 		slide_i += incr;
 	}
-
 	// take care google maps now
 	changeCenter(loc_coords[loc_index[prev_slide_i]], 
 		loc_coords[loc_index[slide_i]], false);
@@ -153,10 +143,6 @@ var marker = null;
 function initMap() {
 	changeCenter(loc_coords[loc_index[0]], 
 		loc_coords[loc_index[0]], true);
-	return;
-
-	marker = new google.maps.Marker({position: goal, map: map});
-
 }
 
 function changeCenter(origin, goal, init) {
@@ -167,6 +153,11 @@ function changeCenter(origin, goal, init) {
 		marker = new google.maps.Marker({position: goal, map: map});
 		return;
 	}
+
+	// doesnt work if click 2 in a row
+	var arrows_prev = document.getElementsByClassName("prev");
+	var arrows_next = document.getElementsByClassName("next");
+	clickValue(false, arrows_prev, arrows_next);
 
 	const d_zoom = 1; 
 	const min_zoom = 1;
@@ -182,15 +173,13 @@ function changeCenter(origin, goal, init) {
 	var zooming = setInterval(function() {
 
 		if (zoom_in_done && zoom_out_done) {
-			console.log("effect done");
+			clickValue(true, arrows_prev, arrows_next);
 			clearInterval(zooming)
 		}
 		else if (!zoom_out_done) {
-			console.log("zooming out");
 			map.setZoom(map.getZoom()-d_zoom);
 		}
 		else if (zoom_out_done) {
-			console.log("zooming in");
 			map.setZoom(map.getZoom()+d_zoom);
 		}
 
@@ -204,5 +193,31 @@ function changeCenter(origin, goal, init) {
 		}
 
 	}, 150); 
+}
+
+
+
+
+function clickValue(bool, arr1, arr2) {
+	var val1 = false; 
+	var val2 = false; 
+
+	if (bool) {
+		const slideBack = function() {
+			plusSlides(-1);
+		}
+		const slideFront = function() {
+			plusSlides(1);
+		}
+		val1 = slideBack;
+		val2 = slideFront;
+	}
+
+	for (var i = 0; i < arr1.length; i++) {
+		arr1[i].onclick = val1;
+	}
+	for (var i = 0; i < arr2.length; i++) {
+		arr2[i].onclick = val2;
+	}
 }
 
