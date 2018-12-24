@@ -6,6 +6,9 @@
 *:focus {
     outline: none;
 }
+html {
+	scroll-behavior: smooth;
+}
 
 body {
 	background-color: black;
@@ -26,6 +29,30 @@ section {
 
 .static {
 	opacity: 0;
+}
+
+.links-effect {
+	text-decoration: none;
+	position: relative;
+	overflow: hidden;
+}
+.links-effect:before {
+	content: '';
+	width: 0;
+	position: absolute;
+	bottom: 0;
+	transition: 0.5s all;
+	left: 0;
+}
+.links-effect:hover:before {
+	width: 100%;
+}
+
+.orgs {
+	color: #193366;
+}
+.orgs:before {
+	border-bottom: 2px solid #cccccc;
 }
 
 /* ///////////////////////// */
@@ -87,6 +114,7 @@ span.intro {
 	top: 50%;
 	transform: translate(0%, -50%);
 	width: 13%;
+	z-index: 2;
 }
 a.nav {
 	width: 100%;
@@ -152,7 +180,6 @@ a.nav:hover {
 }
 .contact-logo {
 	color: #bfbfbf;
-	background-color: black: 
 	transition: color 0.3s ease-in;
 }
 .contact-logo:hover {
@@ -211,6 +238,13 @@ p.about {
 	margin: 0;
 	padding: 0;
 	margin-top: 10%;
+	font-size: 22px;
+}
+.orgs {
+	color: #8cb3d9;
+}
+.orgs:before {
+	border-bottom: 2px solid #cccccc;
 }
 /* ///////////////////////// */
 
@@ -231,10 +265,8 @@ section.work {
 	margin-left: auto;
 	height: 50vh;
 	margin-top: 5%;
-	/*background-color: green;*/
 	display: grid;
 	grid-template-columns: 0.25fr 4fr 16fr;
-	/*grid-template-areas: 'scroll content content content content'*/
 }
 .cursor {
 	width: 100%;
@@ -247,9 +279,7 @@ section.work {
 .work-bar {
 	grid-column: 2;
 	list-style-type: none;
-	/*background-color: rgba(240, 240, 240, 0.25);*/
 	display: block;
-	/*width: 20%;*/
 	height: 100%;
 	left:0;
 }
@@ -262,7 +292,6 @@ button.experience-link {
 	text-align: left;
 	padding-bottom: 20%;
 	padding-top: 5%;
-	/*border-radius: 5px;*/
 
 	border-left: 5px solid transparent;
 	transition: border-color 0.3s ease-in;
@@ -302,9 +331,11 @@ button.experience-link:hover {
 .company-name {
 	color: #0077b3;
 }
+.company-name.links-effect:before {
+	border-bottom: 2px solid #330000;
+}
 .work-xp-descript {
 	width: 80%;
-	/*margin-left: 15%;*/
 	list-style-type: none;
 	padding-left: 5%;
 	padding-top: 2em;
@@ -318,17 +349,29 @@ button.experience-link:hover {
 	padding-bottom: 1%;
 	color: #333333;
 }
-a.underline {
-	text-decoration: none;
-}
-
-a.underline:hover {
-	text-decoration: underline;
-}
-
 
 #CME {
 	visibility: visible;
+}
+
+.view-resume {
+	width: 16%;
+	padding: 1%;
+	margin-left: 42%;
+	margin-right: auto;
+	font-size: 15px;
+	border: 1px solid black;
+	background: none;
+	opacity: 0.7;
+	text-decoration: none;
+	color: black;
+
+	transition: background 0.3s ease-in;
+}
+.view-resume:hover {
+	background-color: #6699cc;
+	color: #e6e6e6;
+	opacity: 0.7;
 }
 /* ///////////////////////// */
 
@@ -435,7 +478,6 @@ section.pictures {
 }
 .carousel-container {
 	position: relative;
-	/*height: 70%;*/
 	width: 100%;
 	min-height: 50vh;
 	margin-top: 4%;
@@ -459,6 +501,7 @@ section.pictures {
 .image-fade.horizontal {
 	width: 35%;
 	margin-left: 10%;
+	margin-top: 10vh;
 }
 .img-carousel {
 	width: 100%;
@@ -487,6 +530,15 @@ a.prev {
 a.next {
 	right: 0;
 }
+.caption {
+	color: #e6e6e6;
+	font-size: 15px;
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	bottom: 10%;
+	text-align: center;
+}
 
 #GoogleMap {
 
@@ -498,12 +550,21 @@ a.next {
     position: absolute;
 }
 
+.footer{
+	background: url(../images/plain_sunset.jpg) no-repeat fixed;
+	background-size: 100%;
+	bottom: 0;
+	display: box;
+	text-align: center;
+	font-size: 15px;
+	color: black;
+	padding-bottom: 2vh;
+}
+
 /* ///////////////////////// 
 
 /* ///////////////////////// */
 /* OTHERS */
-
-
 
 footer {
 	bottom: 0;
@@ -513,6 +574,3 @@ footer {
 	text-align: center;
 }
 /* ///////////////////////// */
-
-
-

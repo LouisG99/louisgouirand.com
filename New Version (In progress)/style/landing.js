@@ -84,7 +84,7 @@ function displayWorkExp(companyName) {
 		}
 	}
 
-	var coNames = ['CME', 'MIS', 'Deloitte'];
+	var coNames = ['CME', 'MIS', 'Deloitte', 'Hyperloop'];
 	for (var i = 0; i < coNames.length; i++) {
 		var link = document.getElementsByClassName("experience-link "+coNames[i])[0];
 		if (coNames[i] === companyName) {
@@ -102,14 +102,16 @@ const loc_index = {
 	0: 'Peninsula Iceland', 
 	1: 'Umich', 
 	2: 'Copenhagen', 
-	3: 'Chicago'
+	3: 'Chicago', 
+	4: 'Nice'
 };
 
 const loc_coords = { 
 	'Umich': {lat: 42.1642, lng: -83.44177}, 
 	'Peninsula Iceland': {lat: 64.908068, lng: -23.112769}, 
 	'Copenhagen': {lat: 55.676707, lng: 12.584278}, 
-	'Chicago': {lat: 41.882788, lng: -87.623342}
+	'Chicago': {lat: 41.882788, lng: -87.623342}, 
+	'Nice': {lat: 43.694387, lng: 7.281815}
 };
 
 function plusSlides(incr) {
@@ -195,9 +197,6 @@ function changeCenter(origin, goal, init) {
 	}, 150); 
 }
 
-
-
-
 function clickValue(bool, arr1, arr2) {
 	var val1 = false; 
 	var val2 = false; 
@@ -220,4 +219,3 @@ function clickValue(bool, arr1, arr2) {
 		arr2[i].onclick = val2;
 	}
 }
-

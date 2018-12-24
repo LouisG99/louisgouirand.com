@@ -1,16 +1,14 @@
 <!DOCTYPE html> 
 	<html>
 		<head>
-			<title>HELLLLOOOO</title>
+			<title>Louis - CS student @ Umich</title>
 
 			<meta name="description" content="Louis Gouirand, personal website • Computer Science student at the University of Michigan - Ann Arbor. You'll find my resume as well as some media content on this webpage." />
 
 			<link href="style/landing.css" type="text/css" rel="stylesheet">	
 			<!-- Footer style -->
 
-
 			<script type="text/javascript" src="style/landing.js"></script>
-			
 
 			<!-- FontAwesome link -->
 			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -28,10 +26,10 @@
 
 			<!-- SIDEBAR -->
 			<div class="static navbar">
-				<a href="#" class="nav" style="background-color: #660000;" onclick="smoothScroll(document.getElementById('about'))">About</a>
-				<a href="#" class="nav" style="background-color: #00802b;">Experience</a>
-				<a href="#" class="nav" style="background-color: #003380;">Projects</a>
-				<a href="#" class="nav" style="background-color: #cc5200;">Travels</a>
+				<a href="#about" class="nav" style="background-color: #660000;" >About</a>
+				<a href="#work" class="nav" style="background-color: #00802b;">Experience</a>
+				<a href="#projects" class="nav" style="background-color: #003380;">Projects</a>
+				<a href="#pictures" class="nav" style="background-color: #cc5200;">Travel</a>
 			</div>
 
 
@@ -81,14 +79,14 @@
 				<div class="about-wrapper">
 					<span class="section-title about">About me</span>
 					<p class="about section-text">I am sophomore studying Computer Science in the College of Engineering at the University of Michigan.
-						<br><br>Currently looking for a 2019 Summer Software Internship
+						<br><br>I am involved with <a class="links-effect orgs" href="https://honors.engin.umich.edu/" target="blank">Engineering Honors</a>, the <a class="links-effect orgs" href="https://mdp.engin.umich.edu/" target="blank">Multidisciplinary Program</a>, and <a class="links-effect orgs" href="https://kappathetapi.com/" target="blank">Kappa Theta Pi</a>, a professional fraternity centered around tech. 
 					</p>
 				</div>
 
 			</section>
 
-			<section class="work">
-				<span class="section-title work">Experience</span>
+			<section class="work" id="work">
+				<span class="section-title work">Where I've worked</span>
 
 				<div class="work-container">
 					<!-- <div class="cursor" id="work-cursor"></div> -->
@@ -97,10 +95,11 @@
 						<button class="experience-link CME" onclick="displayWorkExp('CME')"><span class="company-link">CME?</span></button>
 						<button class="experience-link MIS" onclick="displayWorkExp('MIS')"><span class="company-link">MIS</span></button>
 						<button class="experience-link Deloitte" onclick="displayWorkExp('Deloitte')"><span class="company-link" >Deloitte</span></button>
+						<button class="experience-link Hyperloop" onclick="displayWorkExp('Hyperloop')"><span class="company-link" >Hyperloop</span></button>
 					</ul>
 					<div class="descript-container">
 						<div class="work-descript" id="CME">
-							<span class="job-title">Software Engineering Intern </span><span class="company-name">@ CME Group?</span>
+							<span class="job-title">Software Engineering Intern </span><span class="company-name">@ <a href="https://www.cmegroup.com/" class="company-name links-effect" target="blank">CME Group?</a></span>
 							<br>
 							<span class="work-xp-dates">June 2019 - August 2019</span>
 
@@ -112,7 +111,7 @@
 						</div>
 
 						<div class="work-descript" id="MIS">
-							<span class="job-title">Machine Learning Intern </span><span class="company-name">@ <a href="https://www.monacoinformatiqueservice.mc/"class="company-name underline" target="blank">Monaco Informatique Service</a></span>
+							<span class="job-title">Machine Learning Intern </span><span class="company-name">@ <a href="https://www.monacoinformatiqueservice.mc/" class="company-name links-effect" target="blank">Monaco Informatique Service</a></span>
 							<br>
 							<span class="work-xp-dates">June 2018 - July 2018</span>
 
@@ -126,7 +125,7 @@
 						</div>
 
 						<div class="work-descript" id="Deloitte">
-							<span class="job-title">R.I.S.E. Case Competition </span><span class="company-name">@ <a href="https://www.monacoinformatiqueservice.mc/"class="company-name underline" target="blank">Deloitte</a></span>
+							<span class="job-title">R.I.S.E. Case Competition </span><span class="company-name">@ <a href="https://www2.deloitte.com"class="company-name links-effect" target="blank">Deloitte</a></span>
 							<br>
 							<span class="work-xp-dates">Feb 2018 - March 2018</span>
 
@@ -137,14 +136,27 @@
  								</li>
 							</ul>
 						</div>
+
+						<div class="work-descript" id="Hyperloop">
+							<span class="job-title">Brakes Engineer</span><span class="company-name"> @ <a href="https://www.michiganhyperloop.com/"class="company-name links-effect" target="blank">Michigan Hyperloop</a></span>
+							<br>
+							<span class="work-xp-dates">Sept 2017 - Sept 2018</span>
+
+							<ul class="work-xp-descript">
+								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Worked in a team of diverse engineers to design and build a pod competing at SpaceX Hyperloop Competition</li>
+								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Utilized Python & Matlab to simulate pneumatics system evolution through braking phase</li>
+								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Implemented a fail-proof pneumatics system ensuring braking effectiveness for a pod traveling at 300mph</li>
+							</ul>
+						</div>
 					</div>
 				</div> 
 				
+				<a class="view-resume" href="http://www.louisgouirand.com/resume/pdf_version" target="blank">View full Resume</a>
 
 			</section>
 
-			<section class="projects">
-				<span class="section-title projects">Projects</span>
+			<section class="projects" id="projects">
+				<span class="section-title projects">What I've built</span>
 				<div class="projects grid"> 
 
 					<div class="projects TempIt box" id="project1">
@@ -193,8 +205,8 @@
 			</section>
 
 
-			<section class="pictures">
-				<span class="section-title pictures">Recent travels</span>
+			<section class="pictures" id="pictures">
+				<span class="section-title pictures">Where I've been</span>
 
 				<div class="carousel-container"> 
 
@@ -202,39 +214,43 @@
 						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 						<img src="images/iceland_runner.JPG" class="img-carousel">
 						<a class="next" onclick="plusSlides(+1)">&#10095;</a>
+						<div class="caption">Snaefellness Peninsula, Iceland</div>
 					</div>
-
 					<div class="image-fade"> 
 						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 						<img src="images/diag_sunset.JPG" class="img-carousel" id="first-carousel">
 						<a class="next" onclick="plusSlides(+1)">&#10095;</a>
+						<div class="caption">The Diag, University of Michigan</div>
 					</div>
-
 					<div class="image-fade"> 
 						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 						<img src="images/copenhaguen.jpg" class="img-carousel">
 						<a class="next" onclick="plusSlides(+1)">&#10095;</a>
+						<div class="caption">Copenhagen, Denmark</div>
 					</div>
-
 					<div class="image-fade horizontal"> 
 						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 						<img src="images/icy_bean.jpg" class="img-carousel">
 						<a class="next" onclick="plusSlides(+1)">&#10095;</a>
+						<div class="caption">The Bean, Chicago</div>
+					</div>
+					<div class="image-fade horizontal"> 
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<img src="images/backwards_hat_water.JPG" class="img-carousel">
+						<a class="next" onclick="plusSlides(+1)">&#10095;</a>
+						<div class="caption">Nice, France</div>
 					</div>
 						
 					<div id="GoogleMap"> 
-						n
 					</div>
 
 					<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwzaxN_EYWYo8DogVMUkX7fjsZptsiXS4&callback=initMap">
 					</script>		
-
 				</div>
 			</section>
 
+			<div class="footer">Designed & Built by Louis Gouirand</div>
+
 
 		</body>
-
-
-
 	</html>
