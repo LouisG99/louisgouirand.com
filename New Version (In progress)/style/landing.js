@@ -9,13 +9,24 @@ function makeVisible(list_elem) {
 	}
 }
 
+var isInViewport = function isInViewport(element) {
+	var rect = element.getBoundingClientRect();
+	var html = document.documentElement;
+
+	return (rect.top >= 0 && 
+		rect.left >= 0 && 
+		rect.bottom <= (window.innerHeight || html.clientHeight) &&
+		rect.right <= (window.innerWidth || html.clientWidth)
+	);
+}
+
 window.onload = function(){ 
 	var introList = document.getElementsByClassName("intro");
 	var introName = document.getElementById("name-intro");
 	var afterIntro = document.getElementsByClassName("static");
 
-	var CME_link = document.getElementsByClassName("experience-link CME")[0];
-	CME_link.style.borderLeft = "5px solid #0077b3";
+	var MDP_link = document.getElementsByClassName("experience-link MDP")[0];
+	MDP_link.style.borderLeft = "5px solid #0077b3";
 
 	introName.addEventListener("animationend", function( event ) { 
 	    for(var i = 0; i < afterIntro.length; i++) {
@@ -23,7 +34,18 @@ window.onload = function(){
 
 		}
 	},false);
+
+
+	// animation for timeline
+	let timeline = document.getElementsByClassName("timeline-container")[0];
+	window.addEventListener('scroll', function(event) {
+		if (isInViewport(timeline)) {
+			grow_period();
+		}
+	} );
 }
+
+
 
 function hide(elem){
 	elem.style.opacity = 0;
@@ -84,7 +106,7 @@ function displayWorkExp(companyName) {
 		}
 	}
 
-	var coNames = ['CME', 'MIS', 'Deloitte', 'Hyperloop'];
+	var coNames = ['MDP', 'MIS', 'Deloitte', 'Hyperloop'];
 	for (var i = 0; i < coNames.length; i++) {
 		var link = document.getElementsByClassName("experience-link "+coNames[i])[0];
 		if (coNames[i] === companyName) {
@@ -217,5 +239,12 @@ function clickValue(bool, arr1, arr2) {
 	}
 	for (var i = 0; i < arr2.length; i++) {
 		arr2[i].onclick = val2;
+	}
+}
+
+function grow_period() {
+	var tings = document.getElementsByClassName("period");
+	for (var i = 0; i < tings.length; i++){
+		tings[i].style.height = '50%';
 	}
 }
