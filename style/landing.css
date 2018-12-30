@@ -23,7 +23,7 @@ section {
 .void {
 	height: 100vh;
 	display: block;
-	background: url(../images/SD_Dark_Color.jpeg) no-repeat fixed; 
+	background: url(../images/SD_dark_Color.jpeg) no-repeat fixed; 
 	background-size: 100%;
 }
 
@@ -576,4 +576,53 @@ footer {
 /* ///////////////////////// */
 
 /* ///////////////////////// */
+/* TIMELINE */
+#timeline-section {
+	background-color: white;
+}
+
+.timeline-container{
+	display: grid;
+	grid-template-columns: 4fr 1fr 4fr;
+
+	height: 70vh;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 10vh;
+	
+	background-color: #cccccc;
+}
+.lines {
+	height: 100%;
+	width: 100%;
+	background-color: red;
+	grid-column: 2;
+	position: relative;
+}
+.period {
+	position: absolute;
+	display: inline-block;
+	width: 50%;
+	height: 10%;
+	transition: all 1s ease;
+}
+
+
+
+
+.France.period {
+	background-color: white;
+	left: 0;
+	bottom: 0;
+}
+.US.period {
+	background-color: black;
+	bottom: 50%;
+	left: 0;
+}
+.Michigan.period {
+	background-color: blue;
+	left: 50%;
+	bottom: 50%;
+}
 
