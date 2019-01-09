@@ -23,7 +23,7 @@ section {
 .void {
 	height: 100vh;
 	display: block;
-	background: url(../images/SD_dark_Color.jpeg) no-repeat fixed; 
+	background: url(../images/SD_dark_color.jpeg) no-repeat fixed; 
 	background-size: 100%;
 }
 
@@ -114,7 +114,7 @@ span.intro {
 	top: 50%;
 	transform: translate(0%, -50%);
 	width: 13%;
-	z-index: 2;
+	z-index: 10;
 }
 a.nav {
 	width: 100%;
@@ -447,7 +447,7 @@ section.projects {
 	align-items: center; 
 	font-size: 25px;
 	letter-spacing: 0.3em;
-	
+
 }
 .project.description {
 	padding: 5%;
