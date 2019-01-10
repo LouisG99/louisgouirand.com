@@ -1,0 +1,121 @@
+@media only screen and (orientation: portrait) and (max-width: 1000px) {
+	/*BACKGROUNDS*/
+	.void, section.about, section.work, section.projects, 
+	section.pictures {
+		background-size: auto 100vh;;
+	}
+
+	section.about {
+		/*background: url(../images/niagara_falls_me_mobile.jpg) no-repeat fixed; */
+		background: url(../images/Paris_color.jpg) no-repeat fixed; 
+		background-size: auto 100vh;
+	}
+
+	/*GENERAL*/
+	.section-title {
+		padding-top: 10vh;
+	}
+
+	.section-title.projects, .section-title.work, .section-title.pictures {
+		padding-top: 15%;
+	}
+
+	/*INTRO*/
+	.container.intro {
+		top: 25%;
+	}
+	.top-left {
+		margin-top: 5%;
+	}
+	#name-intro {
+		font-size: 70px;
+	}
+	#title-intro {
+		font-size: 35px;
+	}.name-top {
+		font-size: 30px;
+	}.title-top {
+		font-size: 22px;
+	}	
+
+	/*NAVBAR AND LINKS*/
+	.navbar {
+		width: 23%;
+	}
+	a.nav {
+		font-size: 35px;
+		padding-top: 15%;
+		padding-bottom: 15%;
+		/*padding-left: 30%;*/
+	}
+
+	.contact-link {
+		font-size: 3.5em;
+	}
+	.vertical-line {
+		height: 6vh;
+	}
+
+	/*WORK SECTION*/
+	.work-container {
+		margin-top: 20%;
+		margin-left: 20%;
+		max-height: 70vh;
+		grid-template-columns: none;
+		grid-template-rows: 4fr 16fr;
+	}
+	.work-bar {
+		grid-row: 1;
+	}
+	button.experience-link {
+		display: inline-block;
+		width: auto;
+		text-align: center;
+		border-left: none;
+		border-bottom: 5px solid transparent;
+		padding-bottom: 5%; 
+	}
+	button.experience-link:hover {
+		background-color: transparent;
+		opacity: 1;
+	}
+	.company-link {
+		font-size: 30px;
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+
+	.descript-container {
+		grid-row: 2; 
+		grid-column: 1/-1;
+	}
+	.work-descript {
+		width: auto;
+	}
+	.job-title, .company-name {
+		font-size: 33px;
+	}
+	.work-xp-descript, .work-xp-dates {
+		font-size: 28px;
+	}
+	.work-xp-descript {
+		width: 90%;
+	}
+	.work-bullet {
+		padding-bottom: 5%;
+	}
+
+	.view-resume {
+		width: 35%;
+		font-size: 30px;
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+		text-align: center;
+		padding: 3%;
+	}
+
+} 

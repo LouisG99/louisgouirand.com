@@ -9,24 +9,32 @@ function makeVisible(list_elem) {
 	}
 }
 
-var isInViewport = function isInViewport(element) {
-	var rect = element.getBoundingClientRect();
-	var html = document.documentElement;
+// var isInViewport = function isInViewport(element) {
+// 	var rect = element.getBoundingClientRect();
+// 	var html = document.documentElement;
 
-	return (rect.top >= 0 && 
-		rect.left >= 0 && 
-		rect.bottom <= (window.innerHeight || html.clientHeight) &&
-		rect.right <= (window.innerWidth || html.clientWidth)
-	);
-}
+// 	return (rect.top >= 0 && 
+// 		rect.left >= 0 && 
+// 		rect.bottom <= (window.innerHeight || html.clientHeight) &&
+// 		rect.right <= (window.innerWidth || html.clientWidth)
+// 	);
+// }
 
+var mobile = null;
 window.onload = function(){ 
+	mobile = window.innerHeight > window.innerWidth;
+
 	var introList = document.getElementsByClassName("intro");
 	var introName = document.getElementById("name-intro");
 	var afterIntro = document.getElementsByClassName("static");
 
 	var MDP_link = document.getElementsByClassName("experience-link MDP")[0];
-	MDP_link.style.borderLeft = "5px solid #0077b3";
+	if (mobile) {
+		MDP_link.style.borderBottom = "5px solid #0077b3";
+	}
+	else {
+		MDP_link.style.borderLeft = "5px solid #0077b3";
+	}
 
 	introName.addEventListener("animationend", function( event ) { 
 	    for(var i = 0; i < afterIntro.length; i++) {
@@ -37,12 +45,12 @@ window.onload = function(){
 
 
 	// animation for timeline
-	let timeline = document.getElementsByClassName("timeline-container")[0];
-	window.addEventListener('scroll', function(event) {
-		if (isInViewport(timeline)) {
-			grow_period();
-		}
-	} );
+	// let timeline = document.getElementsByClassName("timeline-container")[0];
+	// window.addEventListener('scroll', function(event) {
+	// 	if (isInViewport(timeline)) {
+	// 		grow_period();
+	// 	}
+	// } );
 }
 
 
@@ -110,10 +118,20 @@ function displayWorkExp(companyName) {
 	for (var i = 0; i < coNames.length; i++) {
 		var link = document.getElementsByClassName("experience-link "+coNames[i])[0];
 		if (coNames[i] === companyName) {
-			link.style.borderLeft = "5px solid #0077b3";
+			if (mobile) {
+				link.style.borderBottom = "5px solid #0077b3";
+			}
+			else {
+				link.style.borderLeft = "5px solid #0077b3";
+			}
 		}
 		else {
-			link.style.borderLeft = "5px solid transparent";
+			if (mobile) {
+				link.style.borderBottom = "5px solid transparent";
+			}
+			else {
+				link.style.borderLeft = "5px solid transparent";
+			}
 		}
 	}
 }

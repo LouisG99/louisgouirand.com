@@ -486,7 +486,6 @@ section.pictures {
 	margin-right: auto;
 	margin-left: auto;
 }
-
 .image-fade {
 	width: 28%;
 	position: absolute;
@@ -542,7 +541,6 @@ a.next {
 }
 
 #GoogleMap {
-
 	height: 50vh;  
     width: 30%;  
     border-radius: 5px;
@@ -551,7 +549,7 @@ a.next {
     position: absolute;
 }
 
-.footer{
+.footer {
 	background: url(../images/plain_sunset.jpg) no-repeat fixed;
 	background-size: 100%;
 	bottom: 0;
@@ -578,7 +576,7 @@ footer {
 
 /* ///////////////////////// */
 /* TIMELINE */
-#timeline-section {
+/*#timeline-section {
 	background-color: white;
 }
 
@@ -626,4 +624,4 @@ footer {
 	left: 50%;
 	bottom: 50%;
 }
-
+*/
