@@ -2,11 +2,10 @@
 	/*BACKGROUNDS*/
 	.void, section.about, section.work, section.projects, 
 	section.pictures {
-		background-size: auto 100vh;;
+		background-size: auto 100vh;
 	}
 
 	section.about {
-		/*background: url(../images/niagara_falls_me_mobile.jpg) no-repeat fixed; */
 		background: url(../images/Paris_color.jpg) no-repeat fixed; 
 		background-size: auto 100vh;
 	}
@@ -14,6 +13,7 @@
 	/*GENERAL*/
 	.section-title {
 		padding-top: 10vh;
+		font-size: 55px;
 	}
 
 	.section-title.projects, .section-title.work, .section-title.pictures {
@@ -33,9 +33,9 @@
 	#title-intro {
 		font-size: 35px;
 	}.name-top {
-		font-size: 30px;
+		font-size: 35px;
 	}.title-top {
-		font-size: 22px;
+		font-size: 27px;
 	}	
 
 	/*NAVBAR AND LINKS*/
@@ -54,6 +54,15 @@
 	}
 	.vertical-line {
 		height: 6vh;
+	}
+
+	/*ABOUT SECTION*/
+	.about-wrapper {
+		width: 60%;
+
+	}
+	.about.section-text {
+		font-size: 40px;
 	}
 
 	/*WORK SECTION*/
@@ -116,6 +125,73 @@
 		margin-left: auto;
 		text-align: center;
 		padding: 3%;
+		margin-top: 5%;
+	}
+
+
+	/*PROJECTS*/
+	.projects.grid {
+		margin-left: 15%;
+		width: 80%;
+		height: auto;
+
+		grid-template-columns: repeat(2, 1fr);
+		grid-row-gap: 5vh;
+	}
+	.projects.box {
+		height: auto;
+	}
+	.project.title {
+		height: 5vh;
+		font-size: 35px;
+		text-align: center;
+	}
+	.project.description {
+		font-size: 28px;
+		height: auto;
+	}
+	.tech-used {
+		font-size: 25px;
+		margin-top: 10%;
+	}
+	.project-link {
+		font-size: 40px;
+	}
+
+	/*CAROUSEL*/
+
+	.image-fade {
+		width: 30vh;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.image-fade.horizontal {
+		margin-top: 5vh;
+		width: 40vh;
+		max-width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+	#GoogleMap {
+		height: 40vh;
+		width: 70%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 43vh;
+		left: 15%;
+	}
+
+	a.prev, a.next {
+		font-size: 45px;
+	}
+	.caption {
+		font-size: 25px;
+	}
+
+
+	.footer {
+		font-size: 30px;
 	}
 
 } 

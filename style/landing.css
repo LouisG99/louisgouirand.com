@@ -551,7 +551,7 @@ a.next {
 
 .footer {
 	background: url(../images/plain_sunset.jpg) no-repeat fixed;
-	background-size: 100%;
+	background-size: cover;
 	bottom: 0;
 	display: box;
 	text-align: center;
@@ -564,7 +564,6 @@ a.next {
 
 /* ///////////////////////// */
 /* OTHERS */
-
 footer {
 	bottom: 0;
 	padding-top: 3%;
@@ -572,6 +571,11 @@ footer {
 	background-color: #a6a6a6;
 	text-align: center;
 }
+
+.void, section.about, section.work, section.projects, 
+	section.pictures {
+		background-size: cover;
+	}
 /* ///////////////////////// */
 
 /* ///////////////////////// */
