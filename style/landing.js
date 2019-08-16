@@ -28,12 +28,12 @@ window.onload = function(){
 	var introName = document.getElementById("name-intro");
 	var afterIntro = document.getElementsByClassName("static");
 
-	var MDP_link = document.getElementsByClassName("experience-link MDP")[0];
+	var first_link = document.getElementsByClassName("experience-link CME")[0];
 	if (mobile) {
-		MDP_link.style.borderBottom = "5px solid #0077b3";
+		first_link.style.borderBottom = "5px solid #0077b3";
 	}
 	else {
-		MDP_link.style.borderLeft = "5px solid #0077b3";
+		first_link.style.borderLeft = "5px solid #0077b3";
 	}
 
 	introName.addEventListener("animationend", function( event ) { 
@@ -114,7 +114,7 @@ function displayWorkExp(companyName) {
 		}
 	}
 
-	var coNames = ['MDP', 'MIS', 'Deloitte', 'Hyperloop'];
+	var coNames = ['CME', 'MDP', 'MIS', 'Deloitte', 'Hyperloop'];
 	for (var i = 0; i < coNames.length; i++) {
 		var link = document.getElementsByClassName("experience-link "+coNames[i])[0];
 		if (coNames[i] === companyName) {

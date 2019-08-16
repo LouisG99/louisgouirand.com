@@ -81,7 +81,7 @@
 			<section id="about" class="about">
 				<div class="about-wrapper">
 					<span class="section-title about">About me</span>
-					<p class="about section-text">I am sophomore studying Computer Science in the College of Engineering at the University of Michigan.
+					<p class="about section-text">I am a junior studying Computer Science in the College of Engineering at the University of Michigan.
 						<br><br>I am involved with <a class="links-effect orgs" href="https://honors.engin.umich.edu/" target="blank">Engineering Honors</a>, the <a class="links-effect orgs" href="https://mdp.engin.umich.edu/" target="blank">Multidisciplinary Program</a>, and <a class="links-effect orgs" href="https://kappathetapi.com/" target="blank">Kappa Theta Pi</a>, a professional fraternity centered around tech. 
 					</p>
 				</div>
@@ -96,6 +96,7 @@
 					<!-- <div class="cursor" id="work-cursor"></div> -->
 
 					<ul class="work-bar"> 
+						<button class="experience-link CME" onclick="displayWorkExp('CME')"><span class="company-link">CME</span></button>
 						<button class="experience-link MDP" onclick="displayWorkExp('MDP')"><span class="company-link">MDP</span></button>
 						<button class="experience-link MIS" onclick="displayWorkExp('MIS')"><span class="company-link">MIS</span></button>
 						<button class="experience-link Deloitte" onclick="displayWorkExp('Deloitte')"><span class="company-link" >Deloitte</span></button>
@@ -104,6 +105,27 @@
 
 
 					<div class="descript-container">
+						<div class="work-descript" id="CME">
+							<span class="job-title">Software Engineering Intern </span><span class="company-name">@ <a href="https://www.cmegroup.com/" class="company-name links-effect" target="blank">CME Group</a></span>
+							<br>
+							<span class="work-xp-dates">May 2019 - August 2019</span>
+
+							<ul class="work-xp-descript">									
+								<li class="work-bullet">
+									<i class="fas fa-caret-right bullet"></i>
+									Added fault tolerance capabilities for gateways to the Globex trading platform on local deployments in order to directly provide prod environment-like conditions for engineers and speed up team’s SDLC by up to 20%
+								</li>
+								<li class="work-bullet">
+									<i class="fas fa-caret-right bullet"></i>
+									Engineered a system of three daemons voting on primary and backup state of gateways through TCP connections in Java to maintain integrity of the platform in case of a gateway failure
+								</li>
+								<li class="work-bullet">
+									<i class="fas fa-caret-right bullet"></i>
+									Slashed regression tests runtime by developing program able to evenly split up tests across AWS EC2 instances
+								</li>
+							</ul>
+						</div>
+
 						<div class="work-descript" id="MDP">
 							<span class="job-title">Software Developer </span><span class="company-name">@ <a href="https://mdp.engin.umich.edu/projects/2019-pqmedicalai/" class="company-name links-effect" target="blank">Proquest Medical AI team</a></span>
 							<br>

@@ -1,5 +1,8 @@
 @media only screen and (orientation: portrait) and (max-width: 1000px) {
 	/*BACKGROUNDS*/
+	* {
+		max-width: 100vw;
+	}
 	.void, section.about, section.work, section.projects, 
 	section.pictures {
 		background-size: auto 100vh;
