@@ -7,6 +7,8 @@
 
 			<meta name="description" content="Louis Gouirand, personal website • Computer Science student at the University of Michigan - Ann Arbor. You'll find my resume as well as some media content on this webpage." />
 
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 			<link href="style/landing.css" type="text/css" rel="stylesheet">
 
 			<link href="style/mobile.css" type="text/css" rel="stylesheet">
@@ -81,8 +83,9 @@
 			<section id="about" class="about">
 				<div class="about-wrapper">
 					<span class="section-title about">About me</span>
-					<p class="about section-text">I am a junior studying Computer Science in the College of Engineering at the University of Michigan.
-						<br><br>I am involved with <a class="links-effect orgs" href="https://honors.engin.umich.edu/" target="blank">Engineering Honors</a>, the <a class="links-effect orgs" href="https://mdp.engin.umich.edu/" target="blank">Multidisciplinary Program</a>, and <a class="links-effect orgs" href="https://kappathetapi.com/" target="blank">Kappa Theta Pi</a>, a professional fraternity centered around tech. 
+					<p class="about section-text">Junior studying Computer Science in the College of Engineering at the University of Michigan.
+						<br><br>Involved with <a class="links-effect orgs" href="https://honors.engin.umich.edu/" target="blank">Engineering Honors</a>, the <a class="links-effect orgs" href="https://mdp.engin.umich.edu/" target="blank">Multidisciplinary Program</a>, and <a class="links-effect orgs" href="https://kappathetapi.com/" target="blank">Kappa Theta Pi</a>, a professional technology fraternity. 
+						<br><br>I am currently looking for a SWE internship for the 2020 Summer.
 					</p>
 				</div>
 
@@ -132,9 +135,9 @@
 							<span class="work-xp-dates">January 2019 - Present</span>
 
 							<ul class="work-xp-descript">
-								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Creating a medical Artificial Intelligence with Proquest for pharmaceutical companies to retrieve compliance information efficiently</li>
-								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Working on Machine Learning and web components of the solution</li>
-								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Cooperating as part of a team of 7 in the Multidisciplinary Program of the University of Michigan</li>
+								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Program an Artificial Intelligence for ProQuest to optimize compliance information searches for pharmaceutical companies when reporting relevant medical studies to the FDA</li>
+								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Design and train a Name Entity Recognition model with PyTorch to be used with a Flask web application</li>
+								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Collaborate on a multidisciplinary team of seven students to ship the AI into production by December 2019</li>
 							</ul>
 						</div>
 
@@ -145,11 +148,9 @@
 							<span class="work-xp-dates">June 2018 - July 2018</span>
 
 							<ul class="work-xp-descript">
-								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Developed a financial bill classifying tool using Computer Vision with OpenCV</li>
-								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Boosted accuracy on classification predictions by up to 20% using probabilistic methods</li>
-								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Performed data preparation in Python (text cleaning, categorical encoding, etc) for Machine Learning tasks 
- 								</li>
-								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Composed extensive technical documentation and hosted a 2-hour workshop on Machine Learning concepts and technologies </li>
+								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Built a financial receipt classifying tool to automate administrative tasks using Computer Vision (OpenCV)</li>
+								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Created reusable Python scripts to perform data preparation (text cleaning, categorical encoding …) for NLP, supervised and unsupervised Machine Learning tasks</li>
+								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Boosted accuracy on classification predictions by up to 20% using probabilistic analysis and thresholding </li>
 							</ul>
 						</div>
 
@@ -186,6 +187,32 @@
 			<section class="projects" id="projects">
 				<span class="section-title projects">What I've built</span>
 				<div class="projects grid"> 
+
+					<div class="projects HondaHacks box" id="project1">
+						<span class="project title">
+							Honda Mobility
+						</span>
+						<p class="project description">Built a detector for dangerous close-by drivers to alert users at risk using a statistics-based Python algorithm during Honda Mobility Hacks.</p>
+						<div class="tech-used">Python R Data analysis Statistics</div>
+						<div class="project-link">
+							<a href="https://github.com/LouisG99/honda-mobility-hacks" target="blank">
+								<i class="fab fa-github" style = "color: #2d5986"></i>
+							</a>
+						</div>
+					</div>
+
+					<div class="projects KTPuild box" id="project1">
+						<span class="project title">
+							KTPuild
+						</span>
+						<p class="project description">Developed an efficient user-friendly alternative to the Make tool, configurable in JSON and able to start compilations concurrently.</p>
+						<div class="tech-used">C++ Linux Compiler JSON</div>
+						<div class="project-link">
+							<a href="https://github.com/LouisG99/KTPuild" target="blank">
+								<i class="fab fa-github" style = "color: #2d5986"></i>
+							</a>
+						</div>
+					</div>
 
 					<div class="projects TempIt box" id="project1">
 						<span class="project title">
@@ -225,7 +252,7 @@
 					<div class="projects Piazza box" id="project4">
 						<span class="project title">Piazza Classifier</span>
 						<p class="project description">Developed a classifier for piazza posts to tag their topic automatically. Used bayesian probabilistic approach.</p>
-						<div class="tech-used">C++ CSV data</div>
+						<div class="tech-used">C++ CSV data Probability</div>
 						</div>
 					</div>
 
@@ -246,31 +273,42 @@
 					</div>
 					<div class="image-fade"> 
 						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-						<img src="images/diag_sunset.JPG" class="img-carousel" id="first-carousel">
+						<img src="images/portugal_beach.jpeg" class="img-carousel">
 						<a class="next" onclick="plusSlides(+1)">&#10095;</a>
-						<div class="caption">The Diag, University of Michigan</div>
-					</div>
-					<div class="image-fade"> 
-						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-						<img src="images/copenhaguen.jpg" class="img-carousel">
-						<a class="next" onclick="plusSlides(+1)">&#10095;</a>
-						<div class="caption">Copenhagen, Denmark</div>
+						<div class="caption">Lisbon, Portugal</div>
 					</div>
 					<div class="image-fade horizontal"> 
 						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-						<img src="images/icy_bean.jpg" class="img-carousel">
+						<img src="images/cambridgeUK.jpeg" class="img-carousel">
 						<a class="next" onclick="plusSlides(+1)">&#10095;</a>
-						<div class="caption">The Bean, Chicago</div>
+						<div class="caption">Cambridge, UK</div>
 					</div>
 					<div class="image-fade horizontal"> 
 						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-						<img src="images/backwards_hat_water.JPG" class="img-carousel">
+						<img src="images/new_york_bridge.jpeg" class="img-carousel">
+						<a class="next" onclick="plusSlides(+1)">&#10095;</a>
+						<div class="caption">New York, NY</div>
+					</div>
+					<div class="image-fade horizontal"> 
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<img src="images/Niagara_slow_shot.jpg" class="img-carousel">
+						<a class="next" onclick="plusSlides(+1)">&#10095;</a>
+						<div class="caption">Niagara Falls, NY</div>
+					</div>
+					<div class="image-fade horizontal"> 
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<img src="images/nice_sunset.JPG" class="img-carousel">
 						<a class="next" onclick="plusSlides(+1)">&#10095;</a>
 						<div class="caption">Nice, France</div>
 					</div>
-						
-					<div id="GoogleMap"> 
+					<div class="image-fade"> 
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<img src="images/chiago_beach.jpeg" class="img-carousel">
+						<a class="next" onclick="plusSlides(+1)">&#10095;</a>
+						<div class="caption">Chicago, IL</div>
 					</div>
+						
+					<div id="GoogleMap"></div>
 
 
 					<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwzaxN_EYWYo8DogVMUkX7fjsZptsiXS4&callback=initMap">

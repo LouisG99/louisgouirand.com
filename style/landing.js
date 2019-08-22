@@ -1,6 +1,5 @@
 /* Add SVG graphs on first section
 	Add timeline that goes on as scroll down the website 
-	Add a carousel for some cool pictures
 */
 
 function makeVisible(list_elem) {
@@ -8,17 +7,6 @@ function makeVisible(list_elem) {
 		list_elem[i].style.visbility = "visible";
 	}
 }
-
-// var isInViewport = function isInViewport(element) {
-// 	var rect = element.getBoundingClientRect();
-// 	var html = document.documentElement;
-
-// 	return (rect.top >= 0 && 
-// 		rect.left >= 0 && 
-// 		rect.bottom <= (window.innerHeight || html.clientHeight) &&
-// 		rect.right <= (window.innerWidth || html.clientWidth)
-// 	);
-// }
 
 var mobile = null;
 window.onload = function(){ 
@@ -140,18 +128,22 @@ function displayWorkExp(companyName) {
 var slide_i = 0; 
 const loc_index = {
 	0: 'Peninsula Iceland', 
-	1: 'Umich', 
-	2: 'Copenhagen', 
-	3: 'Chicago', 
-	4: 'Nice'
+	1: 'Lisbon', 
+	2: 'Cambridge', 
+	3: 'New York', 
+	4: 'Niagara Falls', 
+	5: 'Nice', 
+	6: 'Chicago'
 };
 
 const loc_coords = { 
-	'Umich': {lat: 42.1642, lng: -83.44177}, 
 	'Peninsula Iceland': {lat: 64.908068, lng: -23.112769}, 
-	'Copenhagen': {lat: 55.676707, lng: 12.584278}, 
 	'Chicago': {lat: 41.882788, lng: -87.623342}, 
-	'Nice': {lat: 43.694387, lng: 7.281815}
+	'Nice': {lat: 43.694387, lng: 7.281815}, 
+	'New York' : {lat: 40.7128, lng : -74.0060}, 
+	'Cambridge' : {lat: 52.2053, lng: 0.1218}, 
+	'Lisbon' : {lat: 38.7223, lng: -9.1393}, 
+	'Niagara Falls' : {lat: 43.0962, lng: -79.0377}
 };
 
 function plusSlides(incr) {

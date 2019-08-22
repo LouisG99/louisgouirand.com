@@ -398,7 +398,7 @@ section.projects {
 	margin-left: auto;
 	margin-right: auto;
 	grid-template-columns: repeat(3, 1fr);
-	grid-area: "TempIt CountUp Yeah";
+	grid-area: "HondaHacks KTPuild TempIt" "CountUp Physics Piazza";
 }
 .projects.box {
 	width: 90%;
