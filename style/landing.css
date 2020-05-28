@@ -222,7 +222,7 @@ a.nav:hover {
 section.about {
 	height: 100vh;
 	display: block;
-	background: url(../images/niagara_falls_me.jpeg) no-repeat fixed; 
+	background: url(../images/niagara_falls_me.jpeg) no-repeat fixed;
 	background-size: 100%;
 }
 .about-wrapper {
@@ -239,6 +239,10 @@ p.about {
 	padding: 0;
 	margin-top: 10%;
 	font-size: 22px;
+
+	color: white;
+	margin-left: 40vw;
+  margin-top: 20vh;	
 }
 .orgs {
 	color: #8cb3d9;
