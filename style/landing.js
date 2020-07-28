@@ -16,7 +16,7 @@ window.onload = function(){
 	var introName = document.getElementById("name-intro");
 	var afterIntro = document.getElementsByClassName("static");
 
-	var first_link = document.getElementsByClassName("experience-link CME")[0];
+	var first_link = document.getElementsByClassName("experience-link Lyft")[0];
 	if (mobile) {
 		first_link.style.borderBottom = "5px solid #0077b3";
 	}
@@ -102,7 +102,7 @@ function displayWorkExp(companyName) {
 		}
 	}
 
-	var coNames = ['CME', 'MDP', 'MIS', 'Deloitte', 'Hyperloop'];
+	var coNames = ['Lyft', 'CME', 'ProQuest', 'MIS', 'Hyperloop'];
 	for (var i = 0; i < coNames.length; i++) {
 		var link = document.getElementsByClassName("experience-link "+coNames[i])[0];
 		if (coNames[i] === companyName) {

@@ -83,9 +83,9 @@
 			<section id="about" class="about">
 				<div class="about-wrapper">
 					<span class="section-title about">About me</span>
-					<p class="about section-text">Junior studying Computer Science in the College of Engineering at the University of Michigan.
+					<p class="about section-text">I'm a senior studying Computer Science in the College of Engineering at the University of Michigan.
 						<br><br>Involved with <a class="links-effect orgs" href="https://honors.engin.umich.edu/" target="blank">Engineering Honors</a>, the <a class="links-effect orgs" href="https://mdp.engin.umich.edu/" target="blank">Multidisciplinary Program</a>, and <a class="links-effect orgs" href="https://kappathetapi.com/" target="blank">Kappa Theta Pi</a>, a professional technology fraternity. 
-						<br><br>I will be working as a Software Engineering intern at Lyft in SF this summer.
+						<br><br>I just finished a summer internship at Lyft and am looking for new grad full-time software engineering opportunities!
 					</p>
 				</div>
 
@@ -99,16 +99,40 @@
 					<!-- <div class="cursor" id="work-cursor"></div> -->
 
 					<ul class="work-bar"> 
+						<button class="experience-link Lyft" onclick="displayWorkExp('Lyft')"><span class="company-link">Lyft</span></button>
 						<button class="experience-link CME" onclick="displayWorkExp('CME')"><span class="company-link">CME</span></button>
-
-						<button class="experience-link MDP" onclick="displayWorkExp('MDP')"><span class="company-link">MDP</span></button>
+						<button class="experience-link ProQuest" onclick="displayWorkExp('ProQuest')"><span class="company-link">ProQuest</span></button>
 						<button class="experience-link MIS" onclick="displayWorkExp('MIS')"><span class="company-link">MIS</span></button>
-						<button class="experience-link Deloitte" onclick="displayWorkExp('Deloitte')"><span class="company-link" >Deloitte</span></button>
 						<button class="experience-link Hyperloop" onclick="displayWorkExp('Hyperloop')"><span class="company-link" >Hyperloop</span></button>
-					</ul>
-
+					</ul>						
 
 					<div class="descript-container">
+						<div class="work-descript" id="Lyft">
+							<span class="job-title">Software Engineering Intern </span><span class="company-name">@ <a href="https://www.lyft.com/" class="company-name links-effect" target="blank">Lyft</a></span>
+							<br>
+							<span class="work-xp-dates">May 2020 - July 2020</span>
+
+							<ul class="work-xp-descript">									
+								<li class="work-bullet">
+									<i class="fas fa-caret-right bullet"></i>
+									Built, scheduled and rolled out timely rental renewal and charge email communications for renters through a microservice architecture, reducing the cost to renters by up to $500 a week from the consequence system
+								</li>
+								<li class="work-bullet">
+									<i class="fas fa-caret-right bullet"></i>
+									Identified and successfully spearheaded the fix of a major pay-service migration issue prior to hitting production, preserving integrity of payment card information emailed to users through 300K+ weekly receipts
+								</li>
+								<li class="work-bullet">
+									<i class="fas fa-caret-right bullet"></i>
+									Redesigned the driver verification system for rental renewals in Python to prevent Lyft drivers deactivated for
+									safety and compliance issues from accessing Express Drive vehicles
+								</li>
+								<li class="work-bullet">
+									<i class="fas fa-caret-right bullet"></i>
+									Piloted post-COVID restart of escalation consequences for overdue rentals in collaboration with Operations
+								</li>
+							</ul>
+						</div>
+
 						<div class="work-descript" id="CME">
 							<span class="job-title">Software Engineering Intern </span><span class="company-name">@ <a href="https://www.cmegroup.com/" class="company-name links-effect" target="blank">CME Group</a></span>
 							<br>
@@ -117,7 +141,7 @@
 							<ul class="work-xp-descript">									
 								<li class="work-bullet">
 									<i class="fas fa-caret-right bullet"></i>
-									Added fault tolerance capabilities for gateways to the Globex trading platform on local deployments in order to directly provide prod environment-like conditions for engineers and speed up team’s SDLC by up to 20%
+									Enabled fault tolerance capabilities for gateways to the Globex trading platform on local deployments in order to directly provide prod environment-like conditions for engineers and speed up team’s SDLC by up to 20%
 								</li>
 								<li class="work-bullet">
 									<i class="fas fa-caret-right bullet"></i>
@@ -130,15 +154,15 @@
 							</ul>
 						</div>
 
-						<div class="work-descript" id="MDP">
+						<div class="work-descript" id="ProQuest">
 							<span class="job-title">Software Developer </span><span class="company-name">@ <a href="https://mdp.engin.umich.edu/projects/2019-pqmedicalai/" class="company-name links-effect" target="blank">Proquest Medical AI team</a></span>
 							<br>
-							<span class="work-xp-dates">January 2019 - Present</span>
+							<span class="work-xp-dates">January 2019 - December 2019</span>
 
 							<ul class="work-xp-descript">
-								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Program an Artificial Intelligence for ProQuest to optimize compliance information searches for pharmaceutical companies when reporting relevant medical studies to the FDA</li>
-								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Design and train a Name Entity Recognition model with PyTorch to be used with a Flask web application</li>
-								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Collaborate on a multidisciplinary team of seven students to ship the AI into production by December 2019</li>
+								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Delivered a medical Named Entity Recognition web service for pharmaceutical companies and researchers to optimize FDA compliance search for ProQuest clients</li>
+								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Built a bidirectional LSTM-CRF model for PubMed document tagging using ELMo embedding and PyTorch achieving 87% recall and 83% precision on medical corpuses</li>
+								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Integrated the NER model with a Flask + React web app supporting ProQuest’s search engine for documents</li>
 							</ul>
 						</div>
 
@@ -152,18 +176,6 @@
 								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Built a financial receipt classifying tool to automate administrative tasks using Computer Vision (OpenCV)</li>
 								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Created reusable Python scripts to perform data preparation (text cleaning, categorical encoding …) for NLP, supervised and unsupervised Machine Learning tasks</li>
 								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Boosted accuracy on classification predictions by up to 20% using probabilistic analysis and thresholding </li>
-							</ul>
-						</div>
-
-						<div class="work-descript" id="Deloitte">
-							<span class="job-title">R.I.S.E. Case Competition </span><span class="company-name">@ <a href="https://www2.deloitte.com"class="company-name links-effect" target="blank">Deloitte</a></span>
-							<br>
-							<span class="work-xp-dates">February 2018 - March 2018</span>
-
-							<ul class="work-xp-descript">
-								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Designed an IT system architecture to control the risks associated with a specific manufacturing process</li>
-								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Communicated a multi-faceted risk-management solution to a board of Deloitte partners through a professional written and oral proposal</li>
-								<li class="work-bullet"><i class="fas fa-caret-right bullet"></i>Stood out as the winning team for the state of Michigan and advanced to the nationals in Dallas, TX</li>
 							</ul>
 						</div>
 
